@@ -1,0 +1,151 @@
+{
+  "project_info": {
+    "project_number": "1016150575923",
+    "firebase_url": "https://laundryapp-dff14.firebaseio.com",
+    "project_id": "laundryapp-dff14",
+    "storage_bucket": "laundryapp-dff14.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1016150575923:android:6600c74c462087cc",
+        "android_client_info": {
+          "package_name": "com.example.ti_unida.laundryapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1016150575923-ng9tidqarro025bfh7f5svkijb1udjgt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ti_unida.laundryapp",
+            "certificate_hash": "5cb8c6b4e9d8980bac22e493d436d4656c1b56be"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAj4TJWvBbawzxKk-K0sbla5pE3ne7X2Ms"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1016150575923-fkdn7s6mtsjq4ulhilihpe07tk7ai3mm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1016150575923:android:f8c6c01398debd4c",
+        "android_client_info": {
+          "package_name": "com.tiunida.laundry0"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1016150575923-bvm0gn826oufnjkrtgjsr54dkd9iru4h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tiunida.laundry0",
+            "certificate_hash": "5cb8c6b4e9d8980bac22e493d436d4656c1b56be"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAj4TJWvBbawzxKk-K0sbla5pE3ne7X2Ms"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1016150575923-fkdn7s6mtsjq4ulhilihpe07tk7ai3mm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1016150575923:android:a11656e3ca1dc1d0",
+        "android_client_info": {
+          "package_name": "com.tiunida.laundryapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1016150575923-mbbet5k05q306eb9bunqkicl8pbr9gau.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tiunida.laundryapp",
+            "certificate_hash": "5cb8c6b4e9d8980bac22e493d436d4656c1b56be"
+          }
+        },
+        {
+          "client_id": "1016150575923-q55ik8r3lpub74qrm4eibc93s0qhff5m.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tiunida.laundryapp",
+            "certificate_hash": "a2a2e4a9a456a2dade0f602ce4d2beb81b92a799"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAj4TJWvBbawzxKk-K0sbla5pE3ne7X2Ms"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1016150575923-fkdn7s6mtsjq4ulhilihpe07tk7ai3mm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1016150575923:android:5520dcaa0e8fb55a",
+        "android_client_info": {
+          "package_name": "com.tiunida.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1016150575923-5fiiivc0n4a6gd612ibj7cqp1qte4mas.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tiunida.myapplication",
+            "certificate_hash": "5cb8c6b4e9d8980bac22e493d436d4656c1b56be"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAj4TJWvBbawzxKk-K0sbla5pE3ne7X2Ms"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1016150575923-fkdn7s6mtsjq4ulhilihpe07tk7ai3mm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="biruLaut">#2699FB</color>
+    <color name="biruMuda">#F1F9FF</color>
+    <color name="putih">#FFFFFF</color>
+    <color name="biruBorder">#BCE0FD</color>
+    <color name="biruGelap">#0270CE</color>
+
+    <color name="black_effective">#b7b7b7</color>
+
+    <color name="backgroundApp">#d6eeff</color>
+    <color name="basicColor">#2699FB</color>
+    <color name="hitam">#000000</color>
+
+
+</resources>

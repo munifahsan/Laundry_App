@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="product_width">220dip</dimen>
+    <dimen name="product_num_width">30dp</dimen>
+    <dimen name="item_margin_top">10dp</dimen>
+</resources>
