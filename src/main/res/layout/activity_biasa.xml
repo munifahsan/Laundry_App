@@ -1,21 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".order.biasa.ui.BiasaActivity"
-    android:fitsSystemWindows="true"
     android:background="@color/biruMuda"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".order.biasa.ui.BiasaActivity">
+
+    <ProgressBar
+        android:id="@+id/kilat_progress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:indeterminate="true"
+        android:visibility="visible" />
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
 
-            <!-- Your scrolling content -->
+        <!-- Your scrolling content -->
 
 
         <androidx.core.widget.NestedScrollView
@@ -29,208 +37,11 @@
                 android:orientation="vertical"
                 android:padding="0dp">
 
-                <!--<ProgressBar-->
-                <!--android:id="@+id/order_progress"-->
-                <!--style="?android:attr/progressBarStyleSmall"-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:indeterminate="true"-->
-                <!--android:visibility="visible"-->
-                <!--app:layout_constraintEnd_toEndOf="parent"-->
-                <!--app:layout_constraintStart_toStartOf="parent"-->
-                <!--app:layout_constraintTop_toTopOf="parent" />-->
-
-                <!--<RelativeLayout-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="wrap_content">-->
-
-                <!--<LinearLayout-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="match_parent"-->
-                <!--android:orientation="vertical">-->
-
-                <!--<TextView-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:layout_marginTop="6dp"-->
-                <!--android:layout_marginStart="8dp"-->
-                <!--android:layout_marginBottom="6dp"-->
-                <!--android:text="Type"-->
-                <!--android:textColor="@color/biruLaut"/>-->
-                <!--<LinearLayout-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:layout_centerHorizontal="true"-->
-                <!--android:orientation="horizontal">-->
-
-                <!--<Button-->
-                <!--android:id="@+id/button_normal"-->
-                <!--android:layout_width="100dp"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:layout_marginStart="8dp"-->
-                <!--android:layout_marginEnd="8dp"-->
-                <!--android:background="@drawable/btn_order_background"-->
-                <!--android:text="@string/normal_btn"-->
-                <!--android:textColor="@color/putih" />-->
-
-                <!--<Button-->
-                <!--android:id="@+id/button_express"-->
-                <!--android:layout_width="100dp"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:layout_marginStart="8dp"-->
-                <!--android:layout_marginEnd="8dp"-->
-                <!--android:background="@drawable/btn_order_border"-->
-                <!--android:text="@string/express_btn"-->
-                <!--android:textColor="@color/biruLaut" />-->
-
-                <!--<Button-->
-                <!--android:id="@+id/button_kilat"-->
-                <!--android:layout_width="100dp"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:layout_marginStart="8dp"-->
-                <!--android:layout_marginEnd="8dp"-->
-                <!--android:background="@drawable/btn_order_border"-->
-                <!--android:text="@string/kilat_btn"-->
-                <!--android:textColor="@color/biruLaut" />-->
-
-                <!--</LinearLayout>-->
-
-                <!--<RelativeLayout-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="match_parent">-->
-                <!--<LinearLayout-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="match_parent"-->
-                <!--android:orientation="vertical">-->
-
-                <!--<TextView-->
-                <!--android:id="@+id/forecase_txt"-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:layout_gravity="center"-->
-                <!--android:layout_marginTop="6dp"-->
-                <!--android:layout_marginBottom="2dp"-->
-                <!--android:text="ROUGHLY YOUR ORDER WILL BE FINISHED ON"-->
-                <!--android:textColor="@color/biruLaut"-->
-                <!--android:textSize="12sp" />-->
-                <!--<TextView-->
-                <!--android:id="@+id/forecase_done_time"-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:layout_marginTop="6dp"-->
-                <!--android:layout_marginBottom="6dp"-->
-                <!--android:text="@string/tiga_titik"-->
-                <!--android:layout_gravity="center"-->
-                <!--android:textColor="@color/biruLaut"/>-->
-                <!--</LinearLayout>-->
-                <!--</RelativeLayout>-->
-                <!--</LinearLayout>-->
-                <!--</RelativeLayout>-->
-
-                <!--<androidx.constraintlayout.widget.ConstraintLayout-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="220dp"-->
-                    <!--android:background="@color/putih"-->
-                    <!--android:layout_marginTop="8dp">-->
-
-                    <!--<TextView-->
-                        <!--android:id="@+id/detailPesanan"-->
-                        <!--android:layout_width="wrap_content"-->
-                        <!--android:layout_height="wrap_content"-->
-                        <!--android:layout_marginStart="24dp"-->
-                        <!--android:layout_marginTop="16dp"-->
-                        <!--android:layout_marginEnd="8dp"-->
-                        <!--android:text="@string/detail_pesanan"-->
-                        <!--android:textColor="@android:color/black"-->
-                        <!--android:textSize="13sp"-->
-                        <!--android:textStyle="bold"-->
-                        <!--app:layout_constraintEnd_toEndOf="parent"-->
-                        <!--app:layout_constraintHorizontal_bias="0.0"-->
-                        <!--app:layout_constraintStart_toStartOf="parent"-->
-                        <!--app:layout_constraintTop_toTopOf="parent" />-->
-
-                    <!--&lt;!&ndash;<View&ndash;&gt;-->
-                    <!--&lt;!&ndash;android:id="@+id/view4"&ndash;&gt;-->
-                    <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
-                    <!--&lt;!&ndash;android:layout_height="1dp"&ndash;&gt;-->
-                    <!--&lt;!&ndash;android:layout_marginTop="8dp"&ndash;&gt;-->
-                    <!--&lt;!&ndash;android:layout_marginBottom="20dp"&ndash;&gt;-->
-                    <!--&lt;!&ndash;android:background="@android:color/darker_gray"&ndash;&gt;-->
-                    <!--&lt;!&ndash;app:layout_constraintBottom_toBottomOf="parent"&ndash;&gt;-->
-                    <!--&lt;!&ndash;app:layout_constraintEnd_toEndOf="parent"&ndash;&gt;-->
-                    <!--&lt;!&ndash;app:layout_constraintHorizontal_bias="0.0"&ndash;&gt;-->
-                    <!--&lt;!&ndash;app:layout_constraintStart_toStartOf="parent"&ndash;&gt;-->
-                    <!--&lt;!&ndash;app:layout_constraintTop_toTopOf="parent"&ndash;&gt;-->
-                    <!--&lt;!&ndash;app:layout_constraintVertical_bias="0.916" />&ndash;&gt;-->
-
-                    <!--&lt;!&ndash;<TextView&ndash;&gt;-->
-                    <!--&lt;!&ndash;android:id="@+id/textView2"&ndash;&gt;-->
-                    <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
-                    <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
-                    <!--&lt;!&ndash;android:layout_marginStart="24dp"&ndash;&gt;-->
-                    <!--&lt;!&ndash;android:layout_marginEnd="8dp"&ndash;&gt;-->
-                    <!--&lt;!&ndash;android:layout_marginBottom="9dp"&ndash;&gt;-->
-                    <!--&lt;!&ndash;android:text="Detail Jumlah Pakaian"&ndash;&gt;-->
-                    <!--&lt;!&ndash;android:textColor="@android:color/black"&ndash;&gt;-->
-                    <!--&lt;!&ndash;android:textSize="13sp"&ndash;&gt;-->
-                    <!--&lt;!&ndash;android:textStyle="bold"&ndash;&gt;-->
-                    <!--&lt;!&ndash;app:layout_constraintBottom_toBottomOf="parent"&ndash;&gt;-->
-                    <!--&lt;!&ndash;app:layout_constraintEnd_toEndOf="parent"&ndash;&gt;-->
-                    <!--&lt;!&ndash;app:layout_constraintHorizontal_bias="0.0"&ndash;&gt;-->
-                    <!--&lt;!&ndash;app:layout_constraintStart_toStartOf="parent"&ndash;&gt;-->
-                    <!--&lt;!&ndash;app:layout_constraintTop_toBottomOf="@+id/view4"&ndash;&gt;-->
-                    <!--&lt;!&ndash;app:layout_constraintVertical_bias="1.0" />&ndash;&gt;-->
-
-                    <!--<TextView-->
-                        <!--android:id="@+id/tipeLaundry"-->
-                        <!--android:layout_width="wrap_content"-->
-                        <!--android:layout_height="wrap_content"-->
-                        <!--android:layout_marginStart="24dp"-->
-                        <!--android:layout_marginTop="8dp"-->
-                        <!--android:text="@string/tipe_laundry"-->
-                        <!--android:textSize="12sp"-->
-                        <!--app:layout_constraintStart_toStartOf="parent"-->
-                        <!--app:layout_constraintTop_toBottomOf="@+id/detailPesanan" />-->
-
-                    <!--<TextView-->
-                        <!--android:id="@+id/textView11"-->
-                        <!--android:layout_width="wrap_content"-->
-                        <!--android:layout_height="wrap_content"-->
-                        <!--android:layout_marginStart="24dp"-->
-                        <!--android:layout_marginTop="10dp"-->
-                        <!--android:text="@string/waktu_pemesanan"-->
-                        <!--android:textSize="12sp"-->
-                        <!--app:layout_constraintStart_toStartOf="parent"-->
-                        <!--app:layout_constraintTop_toBottomOf="@+id/tipeLaundry" />-->
-
-                    <!--<TextView-->
-                        <!--android:id="@+id/textView12"-->
-                        <!--android:layout_width="wrap_content"-->
-                        <!--android:layout_height="wrap_content"-->
-                        <!--android:layout_marginStart="24dp"-->
-                        <!--android:layout_marginTop="10dp"-->
-                        <!--android:text="@string/waktu_selesai"-->
-                        <!--android:textSize="12sp"-->
-                        <!--app:layout_constraintStart_toStartOf="parent"-->
-                        <!--app:layout_constraintTop_toBottomOf="@+id/textView11" />-->
-
-                    <!--<TextView-->
-                        <!--android:id="@+id/textView13"-->
-                        <!--android:layout_width="wrap_content"-->
-                        <!--android:layout_height="wrap_content"-->
-                        <!--android:layout_marginStart="24dp"-->
-                        <!--android:layout_marginTop="10dp"-->
-                        <!--android:text="@string/alamat_pengiriman"-->
-                        <!--android:textSize="12sp"-->
-                        <!--app:layout_constraintStart_toStartOf="parent"-->
-                        <!--app:layout_constraintTop_toBottomOf="@+id/textView12" />-->
-
-                <!--</androidx.constraintlayout.widget.ConstraintLayout>-->
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="150dp"
-                    android:background="@color/putih"
-                    android:layout_marginTop="10dp">
+                    android:layout_marginTop="4dp"
+                    android:background="@color/putih">
 
                     <TextView
                         android:id="@+id/detailPesanan"
@@ -260,14 +71,14 @@
                             android:textSize="12sp" />
 
                         <!--<TextView-->
-                            <!--android:id="@+id/textView11"-->
-                            <!--android:layout_width="wrap_content"-->
-                            <!--android:layout_height="wrap_content"-->
-                            <!--android:layout_below="@+id/tipeLaundry"-->
-                            <!--android:layout_marginStart="24dp"-->
-                            <!--android:layout_marginTop="10dp"-->
-                            <!--android:text="@string/waktu_pemesanan"-->
-                            <!--android:textSize="12sp" />-->
+                        <!--android:id="@+id/textView11"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_below="@+id/tipeLaundry"-->
+                        <!--android:layout_marginStart="24dp"-->
+                        <!--android:layout_marginTop="10dp"-->
+                        <!--android:text="@string/waktu_pemesanan"-->
+                        <!--android:textSize="12sp" />-->
 
                         <TextView
                             android:id="@+id/textView12"
@@ -295,60 +106,61 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/detailPesanan"
-                        android:layout_toEndOf="@id/detailPesanan1"
                         android:layout_marginStart="70dp"
                         android:layout_marginTop="8dp"
+                        android:layout_toEndOf="@id/detailPesanan1"
                         android:text="Laundry Normal"
-                        android:textStyle="bold"
-                        android:textSize="12sp" />
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
 
                     <!--<TextView-->
-                        <!--android:id="@+id/waktuPemesananValue"-->
-                        <!--android:layout_width="wrap_content"-->
-                        <!--android:layout_height="wrap_content"-->
-                        <!--android:layout_below="@id/tipeLaundryValue"-->
-                        <!--android:layout_toEndOf="@id/detailPesanan1"-->
-                        <!--android:layout_marginStart="70dp"-->
-                        <!--android:layout_marginTop="10dp"-->
-                        <!--android:text="-"-->
-                        <!--android:textStyle="bold"-->
-                        <!--android:textSize="12sp" />-->
+                    <!--android:id="@+id/waktuPemesananValue"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_below="@id/tipeLaundryValue"-->
+                    <!--android:layout_toEndOf="@id/detailPesanan1"-->
+                    <!--android:layout_marginStart="70dp"-->
+                    <!--android:layout_marginTop="10dp"-->
+                    <!--android:text="-"-->
+                    <!--android:textStyle="bold"-->
+                    <!--android:textSize="12sp" />-->
 
                     <TextView
                         android:id="@+id/waktuSelesaiValue"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/tipeLaundryValue"
-                        android:layout_toEndOf="@id/detailPesanan1"
                         android:layout_marginStart="70dp"
                         android:layout_marginTop="10dp"
+                        android:layout_toEndOf="@id/detailPesanan1"
                         android:text="-"
-                        android:textStyle="bold"
-                        android:textSize="12sp" />
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/alamatPengirimanValueDormitory"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/waktuSelesaiValue"
-                        android:layout_toEndOf="@id/detailPesanan1"
                         android:layout_marginStart="70dp"
                         android:layout_marginTop="10dp"
+                        android:layout_toEndOf="@id/detailPesanan1"
                         android:text="-"
-                        android:textStyle="bold"
-                        android:textSize="12sp" />
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/alamatPengirimanValueRoom"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/alamatPengirimanValueDormitory"
-                        android:layout_toEndOf="@id/detailPesanan1"
                         android:layout_marginStart="70dp"
+                        android:layout_toEndOf="@id/detailPesanan1"
                         android:text="-"
-                        android:textStyle="bold"
-                        android:textSize="12sp" />
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
                 </RelativeLayout>
+
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -370,12 +182,36 @@
                         android:textSize="13sp"
                         android:textStyle="bold" />
 
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="0dp"
+                        android:layout_marginBottom="7dp"
+                        android:layout_toEndOf="@+id/textView2"
+                        android:text="(Opsional) "
+                        android:textColor="@color/biruLaut"
+                        android:textSize="13sp"
+                        android:textStyle="italic" />
+
+                    <at.markushi.ui.CircleButton
+                        android:id="@+id/opsionalInfo"
+                        android:layout_width="20dip"
+                        android:layout_height="20dip"
+                        android:layout_marginTop="15dp"
+                        android:layout_toEndOf="@+id/textView3"
+                        android:src="@drawable/ic_info_blue"
+                        app:cb_color="@color/putih"
+                        app:cb_pressedRingWidth="8dip" />
+
                     <RelativeLayout
                         android:id="@+id/headList"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="0dp"
-                        android:layout_below="@id/textView2">
+                        android:layout_below="@id/textView2"
+                        android:layout_marginTop="0dp">
 
                         <com.riyagayasen.easyaccordion.AccordionView
                             android:layout_width="match_parent"
@@ -405,8 +241,8 @@
                         android:id="@+id/bodyList"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="0dp"
-                        android:layout_below="@id/headList">
+                        android:layout_below="@id/headList"
+                        android:layout_marginTop="0dp">
 
                         <com.riyagayasen.easyaccordion.AccordionView
                             android:layout_width="match_parent"
@@ -429,8 +265,8 @@
                         android:id="@+id/handList"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="0dp"
-                        android:layout_below="@id/bodyList">
+                        android:layout_below="@id/bodyList"
+                        android:layout_marginTop="0dp">
 
                         <com.riyagayasen.easyaccordion.AccordionView
                             android:layout_width="match_parent"
@@ -452,8 +288,8 @@
                         android:id="@+id/feetList"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="0dp"
-                        android:layout_below="@id/handList">
+                        android:layout_below="@id/handList"
+                        android:layout_marginTop="0dp">
 
                         <com.riyagayasen.easyaccordion.AccordionView
                             android:layout_width="match_parent"
@@ -475,8 +311,8 @@
                         android:id="@+id/otherList"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="0dp"
                         android:layout_below="@id/feetList"
+                        android:layout_marginTop="0dp"
                         android:visibility="gone">
 
                         <com.riyagayasen.easyaccordion.AccordionView
@@ -545,19 +381,46 @@
                     <!--</LinearLayout>-->
                 </LinearLayout>
 
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/putih"
+                    android:paddingStart="24dp"
+                    android:paddingTop="4dp"
+                    android:paddingEnd="24dp"
+                    android:paddingBottom="4dp">
+
+                    <TextView
+                        android:id="@+id/attentian"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Perhatian!!"
+                        android:textColor="@color/hitam"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <include
+                        layout="@layout/item_attantion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/attentian"
+                        android:layout_marginTop="4dp" />
+                </RelativeLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp">
 
-                        <Button
-                            android:id="@+id/confirm_btn"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:background="@color/putih"
-                            android:padding="8dp"
-                            android:text="@string/confirm_order_btn"
-                            android:textColor="@color/biruLaut" />
+                    <Button
+                        android:id="@+id/confirm_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/putih"
+                        android:padding="8dp"
+                        android:text="@string/confirm_order_btn"
+                        android:textColor="@color/biruLaut" />
                 </LinearLayout>
             </LinearLayout>
         </androidx.core.widget.NestedScrollView>
@@ -581,6 +444,5 @@
         <!--</ScrollView>-->
 
 
-
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
-</FrameLayout>
+</LinearLayout>

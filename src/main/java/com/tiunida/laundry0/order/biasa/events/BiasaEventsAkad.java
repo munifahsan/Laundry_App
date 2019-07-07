@@ -1,6 +1,6 @@
-package com.tiunida.laundry0.order.kilat.events;
+package com.tiunida.laundry0.order.biasa.events;
 
-public class KilatEvents {
+public class BiasaEventsAkad {
     public static final int onInputError = 0;
     public static final int onInputSuccess = 1;
     public static final int onGetDataSuccess = 2;
@@ -8,8 +8,6 @@ public class KilatEvents {
 
     private int eventType;
     private String errorMessage;
-    private String dataRoom;
-    private String dataDormitory;
     private String akad1, akad2, akad3, akad4, akad5, akad6, akad7, akad8, akad9, akad10, akad11, akad12, akad13, akad14, akad15;
 
     public int getEventType() {
@@ -26,22 +24,6 @@ public class KilatEvents {
 
     public void setErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
-    }
-
-    public String getDataRoom() {
-        return dataRoom;
-    }
-
-    public void setDataRoom(String dataRoom) {
-        this.dataRoom = dataRoom;
-    }
-
-    public String getDataDormitory() {
-        return dataDormitory;
-    }
-
-    public void setDataDormitory(String dataDormitory) {
-        this.dataDormitory = dataDormitory;
     }
 
     public String getAkad1() {

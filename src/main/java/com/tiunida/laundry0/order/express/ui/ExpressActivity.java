@@ -6,7 +6,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -43,6 +48,12 @@ public class ExpressActivity extends AppCompatActivity implements ExpressViewMvp
 
     @BindView(R.id.desc_txt)
     EditText mDescTxt;
+
+    @BindView(R.id.confirm_btn)
+    Button mConfirmBtn;
+
+    @BindView(R.id.kilat_progress)
+    ProgressBar progressBar;
 
     @BindView(R.id.tipeLaundryValue)
     TextView mTipeLaundryValue;
@@ -287,6 +298,68 @@ public class ExpressActivity extends AppCompatActivity implements ExpressViewMvp
     CircleButton mSpreiBesarPls;
     private int mJasAlmamaterInt, mJasInt, mSelimutKecilInt, mSelimutBesarInt, mBagCoverInt, mGordengKecilInt, mGordengBesarInt, mSepatuInt, mBantalInt, mTasKecilInt, mTasBesarInt, mSpreiKecilInt, mSpreiBesarInt;
 
+    @BindView(R.id.rel1)
+    RelativeLayout rel1;
+    @BindView(R.id.rel2)
+    RelativeLayout rel2;
+    @BindView(R.id.rel3)
+    RelativeLayout rel3;
+    @BindView(R.id.rel4)
+    RelativeLayout rel4;
+    @BindView(R.id.rel5)
+    RelativeLayout rel5;
+    @BindView(R.id.rel6)
+    RelativeLayout rel6;
+    @BindView(R.id.rel7)
+    RelativeLayout rel7;
+    @BindView(R.id.rel8)
+    RelativeLayout rel8;
+    @BindView(R.id.rel9)
+    RelativeLayout rel9;
+    @BindView(R.id.rel11)
+    RelativeLayout rel11;
+    @BindView(R.id.rel12)
+    RelativeLayout rel12;
+    @BindView(R.id.rel13)
+    RelativeLayout rel13;
+    @BindView(R.id.rel14)
+    RelativeLayout rel14;
+    @BindView(R.id.rel15)
+    RelativeLayout rel15;
+    @BindView(R.id.rel10)
+    RelativeLayout rel10;
+
+    @BindView(R.id.txt1)
+    TextView txt1;
+    @BindView(R.id.txt2)
+    TextView txt2;
+    @BindView(R.id.txt3)
+    TextView txt3;
+    @BindView(R.id.txt4)
+    TextView txt4;
+    @BindView(R.id.txt5)
+    TextView txt5;
+    @BindView(R.id.txt6)
+    TextView txt6;
+    @BindView(R.id.txt7)
+    TextView txt7;
+    @BindView(R.id.txt8)
+    TextView txt8;
+    @BindView(R.id.txt9)
+    TextView txt9;
+    @BindView(R.id.txt10)
+    TextView txt10;
+    @BindView(R.id.txt11)
+    TextView txt11;
+    @BindView(R.id.txt12)
+    TextView txt12;
+    @BindView(R.id.txt13)
+    TextView txt13;
+    @BindView(R.id.txt14)
+    TextView txt14;
+    @BindView(R.id.txt15)
+    TextView txt15;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -328,8 +401,344 @@ public class ExpressActivity extends AppCompatActivity implements ExpressViewMvp
     }
 
     @Override
+    public void setTextAkad1(String text) {
+        Log.d("akad1 activity",""+text);
+        txt1.setText(text);
+    }
+
+    @Override
+    public void setTextAkad2(String text) {
+        txt2.setText(text);
+    }
+
+    @Override
+    public void setTextAkad3(String text) {
+        txt3.setText(text);
+    }
+
+    @Override
+    public void setTextAkad4(String text) {
+        txt4.setText(text);
+    }
+
+    @Override
+    public void setTextAkad5(String text) {
+        txt5.setText(text);
+    }
+
+    @Override
+    public void setTextAkad6(String text) {
+        txt6.setText(text);
+    }
+
+    @Override
+    public void setTextAkad7(String text) {
+        txt7.setText(text);
+    }
+
+    @Override
+    public void setTextAkad8(String text) {
+        txt8.setText(text);
+    }
+
+    @Override
+    public void setTextAkad9(String text) {
+        txt9.setText(text);
+    }
+
+    @Override
+    public void setTextAkad10(String text) {
+        txt10.setText(text);
+    }
+
+    @Override
+    public void setTextAkad11(String text) {
+        txt11.setText(text);
+    }
+
+    @Override
+    public void setTextAkad12(String text) {
+        txt12.setText(text);
+    }
+
+    @Override
+    public void setTextAkad13(String text) {
+        txt13.setText(text);
+    }
+
+    @Override
+    public void setTextAkad14(String text) {
+        txt14.setText(text);
+    }
+
+    @Override
+    public void setTextAkad15(String text) {
+        txt15.setText(text);
+    }
+
+    @Override
+    public void setAkad1Gone() {
+        rel1.setVisibility(View.GONE);
+    }
+
+    @Override
+    public void setAkad2Gone() {
+        rel2.setVisibility(View.GONE);
+    }
+
+    @Override
+    public void setAkad3Gone() {
+        rel3.setVisibility(View.GONE);
+    }
+
+    @Override
+    public void setAkad4Gone() {
+        rel4.setVisibility(View.GONE);
+    }
+
+    @Override
+    public void setAkad5Gone() {
+        rel5.setVisibility(View.GONE);
+    }
+
+    @Override
+    public void setAkad6Gone() {
+        rel6.setVisibility(View.GONE);
+    }
+
+    @Override
+    public void setAkad7Gone() {
+        rel7.setVisibility(View.GONE);
+    }
+
+    @Override
+    public void setAkad8Gone() {
+        rel8.setVisibility(View.GONE);
+    }
+
+    @Override
+    public void setAkad9Gone() {
+        rel9.setVisibility(View.GONE);
+    }
+
+    @Override
+    public void setAkad10Gone() {
+        rel10.setVisibility(View.GONE);
+    }
+
+    @Override
+    public void setAkad11Gone() {
+        rel11.setVisibility(View.GONE);
+    }
+
+    @Override
+    public void setAkad12Gone() {
+        rel12.setVisibility(View.GONE);
+    }
+
+    @Override
+    public void setAkad13Gone() {
+        rel13.setVisibility(View.GONE);
+    }
+
+    @Override
+    public void setAkad14Gone() {
+        rel14.setVisibility(View.GONE);
+    }
+
+    @Override
+    public void setAkad15Gone() {
+        rel15.setVisibility(View.GONE);
+    }
+
+    @Override
+    public void setAkad1Visible() {
+        rel1.setVisibility(View.VISIBLE);
+    }
+
+    @Override
+    public void setAkad2Visible() {
+        rel2.setVisibility(View.VISIBLE);
+    }
+
+    @Override
+    public void setAkad3Visible() {
+        rel3.setVisibility(View.VISIBLE);
+    }
+
+    @Override
+    public void setAkad4Visible() {
+        rel4.setVisibility(View.VISIBLE);
+    }
+
+    @Override
+    public void setAkad5Visible() {
+        rel5.setVisibility(View.VISIBLE);
+    }
+
+    @Override
+    public void setAkad6Visible() {
+        rel6.setVisibility(View.VISIBLE);
+    }
+
+    @Override
+    public void setAkad7Visible() {
+        rel7.setVisibility(View.VISIBLE);
+    }
+
+    @Override
+    public void setAkad8Visible() {
+        rel8.setVisibility(View.VISIBLE);
+    }
+
+    @Override
+    public void setAkad9Visible() {
+        rel9.setVisibility(View.VISIBLE);
+    }
+
+    @Override
+    public void setAkad10Visible() {
+        rel10.setVisibility(View.VISIBLE);
+    }
+
+    @Override
+    public void setAkad11Visible() {
+        rel11.setVisibility(View.VISIBLE);
+    }
+
+    @Override
+    public void setAkad12Visible() {
+        rel12.setVisibility(View.VISIBLE);
+    }
+
+    @Override
+    public void setAkad13Visible() {
+        rel13.setVisibility(View.VISIBLE);
+    }
+
+    @Override
+    public void setAkad14Visible() {
+        rel14.setVisibility(View.VISIBLE);
+    }
+
+    @Override
+    public void setAkad15Visible() {
+        rel15.setVisibility(View.VISIBLE);
+    }
+
+    @Override
+    public void enableInputs(){
+        setInputs(true);
+    }
+
+    @Override
+    public void disableInputs(){
+        setInputs(false);
+    }
+
+    @Override
+    public void setInputs(Boolean enabeled) {
+        mDescTxt.setEnabled(enabeled);
+        mConfirmBtn.setEnabled(enabeled);
+
+        mBandanaMin.setEnabled(enabeled);
+        mTopiMin.setEnabled(enabeled);
+        mMaskerMin.setEnabled(enabeled);
+        mKuplukMin.setEnabled(enabeled);
+        mKrudungMin.setEnabled(enabeled);
+        mPeciMin.setEnabled(enabeled);
+
+        mBandanaPls.setEnabled(enabeled);
+        mTopiPls.setEnabled(enabeled);
+        mMaskerPls.setEnabled(enabeled);
+        mKuplukPls.setEnabled(enabeled);
+        mKrudungPls.setEnabled(enabeled);
+        mPeciPls.setEnabled(enabeled);
+
+        mKaosMin.setEnabled(enabeled);
+        mKaosDalamMin.setEnabled(enabeled);
+        mKemejaMin.setEnabled(enabeled);
+        mBajuMuslimMin.setEnabled(enabeled);
+        mJaketMin.setEnabled(enabeled);
+        mSweterMin.setEnabled(enabeled);
+        mGamisMin.setEnabled(enabeled);
+        mHandukMin.setEnabled(enabeled);
+
+        mKaosPls.setEnabled(enabeled);
+        mKaosDalamPls.setEnabled(enabeled);
+        mKemejaPls.setEnabled(enabeled);
+        mBajuMuslimPls.setEnabled(enabeled);
+        mJaketPls.setEnabled(enabeled);
+        mSweterPls.setEnabled(enabeled);
+        mGamisPls.setEnabled(enabeled);
+        mHandukPls.setEnabled(enabeled);
+
+        mSarungTanganMin.setEnabled(enabeled);
+        mSapuTanganMin.setEnabled(enabeled);
+
+        mSarungTanganPls.setEnabled(enabeled);
+        mSapuTanganPls.setEnabled(enabeled);
+
+        mCelanaMIn.setEnabled(enabeled);
+        mCelanaDalamMin.setEnabled(enabeled);
+        mCelanaPendekMin.setEnabled(enabeled);
+        mSarungMin.setEnabled(enabeled);
+        mCelanaOlahragaMin.setEnabled(enabeled);
+        mRokMin.setEnabled(enabeled);
+        mCelanaLevisMin.setEnabled(enabeled);
+        mKaosKakiMin.setEnabled(enabeled);
+
+        mCelanaPls.setEnabled(enabeled);
+        mCelanaDalamPls.setEnabled(enabeled);
+        mCelanaPendekPls.setEnabled(enabeled);
+        mSarungPls.setEnabled(enabeled);
+        mCelanaOlahragaPls.setEnabled(enabeled);
+        mRokPls.setEnabled(enabeled);
+        mCelanaLevisPls.setEnabled(enabeled);
+        mKaosKakiPls.setEnabled(enabeled);
+
+        mJasAlmamaterMin.setEnabled(enabeled);
+        mJasMin.setEnabled(enabeled);
+        mSelimutKecilMin.setEnabled(enabeled);
+        mSelimutBesarMin.setEnabled(enabeled);
+        mBagCoverMin.setEnabled(enabeled);
+        mGordengKecilMIn.setEnabled(enabeled);
+        mGordengBesarMin.setEnabled(enabeled);
+        mSepatuMin.setEnabled(enabeled);
+        mBantalMin.setEnabled(enabeled);
+        mTasKecilMin.setEnabled(enabeled);
+        mTasBesarMin.setEnabled(enabeled);
+        mSpreiKecilMin.setEnabled(enabeled);
+        mSpreiBesarMin.setEnabled(enabeled);
+
+        mJasAlmamaterPls.setEnabled(enabeled);
+        mJasPls.setEnabled(enabeled);
+        mSelimutKecilPls.setEnabled(enabeled);
+        mSelimutBesarPls.setEnabled(enabeled);
+        mBagCoverPls.setEnabled(enabeled);
+        mGordengKecilPls.setEnabled(enabeled);
+        mGordengBesarPls.setEnabled(enabeled);
+        mSepatuPls.setEnabled(enabeled);
+        mBantalPls.setEnabled(enabeled);
+        mTasKecilPls.setEnabled(enabeled);
+        mTasBesarPls.setEnabled(enabeled);
+        mSpreiKecilPls.setEnabled(enabeled);
+        mSpreiBesarPls.setEnabled(enabeled);
+    }
+
+    @Override
+    public void showProgress(){
+        progressBar.setVisibility(View.VISIBLE);
+    }
+
+    @Override
+    public void hideProgress(){
+        progressBar.setVisibility(View.GONE);
+    }
+
+    @Override
     public void getDataProfile() {
-        mExpressPresenterMvp.getProfileData();
+        mExpressPresenterMvp.getData();
     }
 
     @Override
@@ -357,84 +766,102 @@ public class ExpressActivity extends AppCompatActivity implements ExpressViewMvp
     @Override
     @OnClick(R.id.confirm_btn)
     public void confirmOnClick() {
-        showDialog();
+        getNowTime();
+        getUniqNumByTime();
+
+        final String desc = mDescTxt.getText().toString();
+        final String timeNow = mNowTime;
+        final String uniqNumTime = mUniqNumByTime;
+        final String timeDone = mWaktuSelesaiValue.getText().toString();
+
+        final String bandana = String.valueOf(mBandanaInt);
+        final String topi = String.valueOf(mTopiInt);
+        final String masker = String.valueOf(mMaskerInt);
+        final String kupluk = String.valueOf(mKuplukInt);
+        final String krudung = String.valueOf(mKrudungInt);
+        final String peci = String.valueOf(mPeciInt);
+
+        final String kaos = String.valueOf(mKaosInt);
+        final String kaosDalam = String.valueOf(mKaosDalamInt);
+        final String kemeja = String.valueOf(mKemejaInt);
+        final String bajuMuslim = String.valueOf(mBajuMuslimInt);
+        final String jaket = String.valueOf(mJaketInt);
+        final String sweter = String.valueOf(mSweterInt);
+        final String gamis = String.valueOf(mGamisInt);
+        final String handuk = String.valueOf(mHandukInt);
+
+        final String sarungTangan = String.valueOf(mSarungTanganInt);
+        final String sapuTangan = String.valueOf(mSapuTanganInt);
+
+        final String celana = String.valueOf(mCelanaInt);
+        final String celanaDalam = String.valueOf(mCelanaDalamInt);
+        final String celanaPendek = String.valueOf(mCelanaPendekInt);
+        final String sarung = String.valueOf(mSarungInt);
+        final String celanaOlahraga = String.valueOf(mCelanaOlahragaInt);
+        final String rok = String.valueOf(mRokInt);
+        final String celanaLevis = String.valueOf(mCelanaLevisInt);
+        final String kaosKaki = String.valueOf(mKaosKakiInt);
+
+        final String jasAlmamater = String.valueOf(mJasAlmamaterInt);
+        final String jas = String.valueOf(mJasInt);
+        final String selimutKecil = String.valueOf(mSelimutKecilInt);
+        final String selimutBesar = String.valueOf(mSelimutBesarInt);
+        final String bagCover = String.valueOf(mBagCoverInt);
+        final String gordengKecil = String.valueOf(mGordengKecilInt);
+        final String gordengBesar = String.valueOf(mGordengBesarInt);
+        final String sepatu = String.valueOf(mSepatuInt);
+        final String bantal = String.valueOf(mBantalInt);
+        final String tasKecil = String.valueOf(mTasKecilInt);
+        final String tasBesar = String.valueOf(mTasBesarInt);
+        final String spreiKecil = String.valueOf(mSpreiKecilInt);
+        final String spreiBesar = String.valueOf(mSpreiBesarInt);
+
+        mExpressPresenterMvp.validateInputs(desc, timeNow, uniqNumTime, timeDone,
+                bandana, topi, masker, kupluk, krudung, peci,
+                kaos, kaosDalam, kemeja, bajuMuslim, jaket, sweter, gamis, handuk,
+                sarungTangan, sapuTangan,
+                celana, celanaDalam, celanaPendek, sarung, celanaOlahraga, rok, celanaLevis, kaosKaki,
+                jasAlmamater, jas, selimutKecil, selimutBesar, bagCover, gordengKecil, gordengBesar, sepatu, bantal, tasKecil, tasBesar, spreiKecil, spreiBesar);
     }
 
-    private void showDialog() {
-        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
-                this);
+    @OnClick(R.id.opsionalInfo)
+    public void opsionalInfoOnClick() {
+        showOpsionalInfo();
+    }
+
+    public void showOpsionalInfo() {
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
 
         // set title dialog
-        alertDialogBuilder.setTitle("Yakin jumlah pakaian benar ?");
+        alertDialogBuilder.setTitle("INFO");
 
         // set pesan dari dialog
         alertDialogBuilder
-                .setMessage("Tekan Ya untuk melanjutkan!")
+                .setMessage("Apabila anda tidak mengisi jumlah pakaian, jumlah pakaian anda akan dihitung oleh staff laundry")
+                .setCancelable(false)
+                .setPositiveButton("Ok", null);
+
+        // membuat alert dialog dari builder
+        AlertDialog alertDialog = alertDialogBuilder.create();
+
+        // menampilkan alert dialog
+        alertDialog.show();
+    }
+
+    public void showDialogEmptyData(String desc, String time, String uniqId, String timeDone, String bandana, String topi, String masker, String kupluk, String krudung, String peci, String kaos, String kaos_dalam, String kemeja, String baju_muslim, String jaket, String sweter, String gamis, String handuk, String sarung_tangan, String sapu_tangan, String celana, String celana_dalam, String celana_pendek, String sarung, String celana_olahraga, String rok, String celana_levis, String kaos_kaki, String jas_almamater, String jas, String selimut_kecil, String selimut_besar, String bag_cover, String gordeng_kecil, String gordeng_besar, String sepatu, String bantal, String tas_kecil, String tas_besar, String sprei_kecil, String sprei_besar) {
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+
+        // set title dialog
+        alertDialogBuilder.setTitle("Yakin tidak mengisi jumlah pakaian ?");
+
+        // set pesan dari dialog
+        alertDialogBuilder
+                .setMessage("Pakain akan dihitung oleh staff")
                 .setCancelable(false)
                 .setPositiveButton("Ya", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         // jika tombol diklik, maka akan menutup activity ini
-                        getNowTime();
-                        getUniqNumByTime();
-                        final String desc = mDescTxt.getText().toString();
-                        final String timeNow = mNowTime;
-                        final String uniqNumTime = mUniqNumByTime;
-                        final String timeDone = mWaktuSelesaiValue.getText().toString();
-
-                        final String bandana = String.valueOf(mBandanaInt);
-                        final String topi = String.valueOf(mTopiInt);
-                        final String masker = String.valueOf(mMaskerInt);
-                        final String kupluk = String.valueOf(mKuplukInt);
-                        final String krudung = String.valueOf(mKrudungInt);
-                        final String peci = String.valueOf(mPeciInt);
-
-                        final String kaos = String.valueOf(mKaosInt);
-                        final String kaosDalam = String.valueOf(mKaosDalamInt);
-                        final String kemeja = String.valueOf(mKemejaInt);
-                        final String bajuMuslim = String.valueOf(mBajuMuslimInt);
-                        final String jaket = String.valueOf(mJaketInt);
-                        final String sweter = String.valueOf(mSweterInt);
-                        final String gamis = String.valueOf(mGamisInt);
-                        final String handuk = String.valueOf(mHandukInt);
-
-                        final String sarungTangan = String.valueOf(mSarungTanganInt);
-                        final String sapuTangan = String.valueOf(mSapuTanganInt);
-
-                        final String celana = String.valueOf(mCelanaInt);
-                        final String celanaDalam = String.valueOf(mCelanaDalamInt);
-                        final String celanaPendek = String.valueOf(mCelanaPendekInt);
-                        final String sarung = String.valueOf(mSarungInt);
-                        final String celanaOlahraga = String.valueOf(mCelanaOlahragaInt);
-                        final String rok = String.valueOf(mRokInt);
-                        final String celanaLevis = String.valueOf(mCelanaLevisInt);
-                        final String kaosKaki = String.valueOf(mKaosKakiInt);
-
-                        final String jasAlmamater = String.valueOf(mJasAlmamaterInt);
-                        final String jas = String.valueOf(mJasInt);
-                        final String selimutKecil = String.valueOf(mSelimutKecilInt);
-                        final String selimutBesar = String.valueOf(mSelimutBesarInt);
-                        final String bagCover = String.valueOf(mBagCoverInt);
-                        final String gordengKecil = String.valueOf(mGordengKecilInt);
-                        final String gordengBesar = String.valueOf(mGordengBesarInt);
-                        final String sepatu = String.valueOf(mSepatuInt);
-                        final String bantal = String.valueOf(mBantalInt);
-                        final String tasKecil = String.valueOf(mTasKecilInt);
-                        final String tasBesar = String.valueOf(mTasBesarInt);
-                        final String spreiKecil = String.valueOf(mSpreiKecilInt);
-                        final String spreiBesar = String.valueOf(mSpreiBesarInt);
-
-                        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-                        if (user != null) {
-                            // User is signed in
-                            mExpressPresenterMvp.validateInputs(desc, timeNow, uniqNumTime, timeDone,
-                                    bandana, topi, masker, kupluk, krudung, peci,
-                                    kaos, kaosDalam, kemeja, bajuMuslim, jaket, sweter, gamis, handuk,
-                                    sarungTangan, sapuTangan,
-                                    celana, celanaDalam, celanaPendek, sarung, celanaOlahraga, rok, celanaLevis, kaosKaki,
-                                    jasAlmamater, jas, selimutKecil, selimutBesar, bagCover, gordengKecil, gordengBesar, sepatu, bantal, tasKecil, tasBesar, spreiKecil, spreiBesar);
-                        } else {
-                            // No user is signed in
-                        }
+                        mExpressPresenterMvp.inputs(desc, time, uniqId, timeDone, bandana, topi, masker, kupluk, krudung, peci, kaos, kaos_dalam, kemeja, baju_muslim, jaket, sweter, gamis, handuk, sarung_tangan, sapu_tangan, celana, celana_dalam, celana_pendek, sarung, celana_olahraga, rok, celana_levis, kaos_kaki, jas_almamater, jas, selimut_kecil, selimut_besar, bag_cover, gordeng_kecil, gordeng_besar, sepatu, bantal, tas_kecil, tas_besar, sprei_kecil, sprei_besar);
                     }
                 })
                 .setNegativeButton("Tidak", new DialogInterface.OnClickListener() {
@@ -451,6 +878,38 @@ public class ExpressActivity extends AppCompatActivity implements ExpressViewMvp
         // menampilkan alert dialog
         alertDialog.show();
     }
+
+    public void showDialogConfirmData(String desc, String time, String uniqId, String timeDone, String bandana, String topi, String masker, String kupluk, String krudung, String peci, String kaos, String kaos_dalam, String kemeja, String baju_muslim, String jaket, String sweter, String gamis, String handuk, String sarung_tangan, String sapu_tangan, String celana, String celana_dalam, String celana_pendek, String sarung, String celana_olahraga, String rok, String celana_levis, String kaos_kaki, String jas_almamater, String jas, String selimut_kecil, String selimut_besar, String bag_cover, String gordeng_kecil, String gordeng_besar, String sepatu, String bantal, String tas_kecil, String tas_besar, String sprei_kecil, String sprei_besar) {
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+
+        // set title dialog
+        alertDialogBuilder.setTitle("Yakin jumlah pakaian benar ?");
+
+        // set pesan dari dialog
+        alertDialogBuilder
+                .setMessage("Ya untuk melanjutkan!")
+                .setCancelable(false)
+                .setPositiveButton("Ya", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        // jika tombol diklik, maka akan menutup activity ini
+                        mExpressPresenterMvp.inputs(desc, time, uniqId, timeDone, bandana, topi, masker, kupluk, krudung, peci, kaos, kaos_dalam, kemeja, baju_muslim, jaket, sweter, gamis, handuk, sarung_tangan, sapu_tangan, celana, celana_dalam, celana_pendek, sarung, celana_olahraga, rok, celana_levis, kaos_kaki, jas_almamater, jas, selimut_kecil, selimut_besar, bag_cover, gordeng_kecil, gordeng_besar, sepatu, bantal, tas_kecil, tas_besar, sprei_kecil, sprei_besar);
+                    }
+                })
+                .setNegativeButton("Tidak", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        // jika tombol ini diklik, akan menutup dialog
+                        // dan tidak terjadi apa2
+                        dialog.cancel();
+                    }
+                });
+
+        // membuat alert dialog dari builder
+        AlertDialog alertDialog = alertDialogBuilder.create();
+
+        // menampilkan alert dialog
+        alertDialog.show();
+    }
+
 
     @Override
     @OnClick(R.id.bandana_min)

@@ -14,7 +14,8 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.tiunida.laundry0.eventBus.EventBus;
 import com.tiunida.laundry0.eventBus.GreenRobotEventBus;
-import com.tiunida.laundry0.order.express.events.ExpressEvents;
+import com.tiunida.laundry0.order.express.events.ExpressEventsAkad;
+import com.tiunida.laundry0.order.express.events.ExpressEventsProfile;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -46,25 +47,62 @@ public class ExpressRepository implements ExpressRepositoryMvp {
                         String dormitory = task.getResult().getString("2 dormitory");
                         String test = task.getResult().getString("done");
 
-                        Log.d("dona data ", "" + test);
-
-                        postEvent(ExpressEvents.onGetDataSuccess, null, dormitory, room);
+                        postEvent(ExpressEventsProfile.onGetDataSuccess, null, dormitory, room);
                     }
                 } else {
                     String errorMessage = task.getException().getMessage();
-                    postEvent(ExpressEvents.onGetDataError, errorMessage);
+                    postEvent(ExpressEventsProfile.onGetDataError, errorMessage);
                 }
             }
         });
     }
 
     @Override
-    public void storeFirestore(String desc, String time, String uniqId, String timeDone, String bandana, String topi, String masker, String kupluk, String krudung, String peci, String kaos, String kaos_dalam, String kemeja, String baju_muslim, String jaket, String sweter, String gamis, String handuk, String sarung_tangan, String sapu_tangan, String celana, String celana_dalam, String celana_pendek, String sarung, String celana_olahraga, String rok, String celana_levis, String kaos_kaki, String jas_almamater, String jas, String selimut_kecil, String selimut_besar, String bag_cover, String gordeng_kecil, String gordeng_besar, String sepatu, String bantal, String tas_kecil, String tas_besar, String sprei_kecil, String sprei_besar) {
-        Map<String, Object> userMap2 = new HashMap<>();
+    public void getAkadData() {
+        firebaseFirestore.collection("Tentang").document("BnFBK532PL2N6KNiJIpo")
+                .collection("akad").document("awYiYQq1ROA8IcE2V6mx").get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                if (task.isSuccessful()) {
+                    Log.d("repo onComplete suc:", "masuk");
+
+                    if (task.getResult().exists()) {
+                        String akad1 = task.getResult().getString("1");
+                        String akad2 = task.getResult().getString("2");
+                        String akad3 = task.getResult().getString("3");
+                        String akad4 = task.getResult().getString("4");
+                        String akad5 = task.getResult().getString("5");
+                        String akad6 = task.getResult().getString("6");
+                        String akad7 = task.getResult().getString("7");
+                        String akad8 = task.getResult().getString("8");
+                        String akad9 = task.getResult().getString("9");
+                        String akad10 = task.getResult().getString("10");
+                        String akad11 = task.getResult().getString("11");
+                        String akad12 = task.getResult().getString("12");
+                        String akad13 = task.getResult().getString("13");
+                        String akad14 = task.getResult().getString("14");
+                        String akad15 = task.getResult().getString("15");
+
+                        Log.d("akad1 repo",""+akad1);
+
+                        postEvent(ExpressEventsAkad.onGetDataSuccess, null, akad1, akad2, akad3, akad4, akad5, akad6, akad7, akad8, akad9, akad10, akad11, akad12, akad13, akad14, akad15);
+                    }
+                } else {
+                    String errorMessage = task.getException().getMessage();
+                    //postEvent(KilatEventsProfile.onGetDataError, errorMessage);
+                }
+            }
+        });
+    }
+
+    @Override
+    public void storeFirestore(String desc, String time, String uniqId, String timeDone, String bandana, String topi, String masker, String kupluk, String krudung, String peci, String kaos, String kaos_dalam, String kemeja, String baju_muslim, String jaket, String sweter, String gamis, String handuk, String sarung_tangan, String sapu_tangan, String celana, String celana_dalam, String celana_pendek, String sarung, String celana_olahraga, String rok, String celana_levis, String kaos_kaki, String jas_almamater, String jas, String selimut_kecil, String selimut_besar, String bag_cover, String gordeng_kecil, String gordeng_besar, String sepatu, String bantal,
+                               String tas_kecil, String tas_besar, String sprei_kecil, String sprei_besar) {
         int uniqTimeId = Integer.valueOf(uniqId);
+        Map<String, Object> userMap2 = new HashMap<>();
         userMap2.put("a_user_id", user_id);
         userMap2.put("a_catatan", desc);
-        userMap2.put("a_uniq_id",uniqTimeId);
+        userMap2.put("a_uniq_id", uniqTimeId);
         userMap2.put("a_time", time);
         userMap2.put("a_jenis", "Kilat");
         userMap2.put("a_waktu_selesai", timeDone);
@@ -126,10 +164,10 @@ public class ExpressRepository implements ExpressRepositoryMvp {
             public void onComplete(@NonNull Task<DocumentReference> task) {
                 if (task.isSuccessful()) {
                     Log.d("masuk isSuccess ", " ya");
-                    postEvent(ExpressEvents.onInputSuccess);
+                    postEvent(ExpressEventsProfile.onInputSuccess);
                 } else {
                     String errorMessage = task.getException().getMessage();
-                    postEvent(ExpressEvents.onInputError, errorMessage);
+                    postEvent(ExpressEventsProfile.onInputError, errorMessage);
                     Log.d("error nya ", "" + errorMessage);
                 }
             }
@@ -138,16 +176,45 @@ public class ExpressRepository implements ExpressRepositoryMvp {
 
     @Override
     public void postEvent(int type, String errorMessage, String dataRoom, String dataDormitory) {
-        ExpressEvents expressEvents = new ExpressEvents();
-        expressEvents.setEventType(type);
+        ExpressEventsProfile expressEventsProfile = new ExpressEventsProfile();
+        expressEventsProfile.setEventType(type);
         Log.d("masuk post", "masuk post event succes not null");
-        if (errorMessage == null && dataRoom != null && dataDormitory != null) {
-            expressEvents.setErrorMessage(errorMessage);
-            expressEvents.setDataRoom(dataRoom);
-            expressEvents.setDataDormitory(dataDormitory);
+        if (errorMessage == null) {
+            expressEventsProfile.setErrorMessage(errorMessage);
         }
+        expressEventsProfile.setDataRoom(dataRoom);
+        expressEventsProfile.setDataDormitory(dataDormitory);
+
         EventBus eventBus = GreenRobotEventBus.getInstance();
-        eventBus.post(expressEvents);
+        eventBus.post(expressEventsProfile);
+    }
+
+    @Override
+    public void postEvent(int type, String errorMessage, String akad1, String akad2, String akad3, String akad4, String akad5, String akad6, String akad7, String akad8, String akad9, String akad10, String akad11, String akad12, String akad13, String akad14, String akad15) {
+        ExpressEventsAkad kilatEventsAkad = new ExpressEventsAkad();
+        kilatEventsAkad.setEventType(type);
+        Log.d("masuk post", "masuk post event succes not null");
+//        if (errorMessage == null) {
+//            kilatEvents.setErrorMessage(errorMessage);
+//        }
+        kilatEventsAkad.setAkad1(akad1);
+        kilatEventsAkad.setAkad2(akad2);
+        kilatEventsAkad.setAkad3(akad3);
+        kilatEventsAkad.setAkad4(akad4);
+        kilatEventsAkad.setAkad5(akad5);
+        kilatEventsAkad.setAkad6(akad6);
+        kilatEventsAkad.setAkad7(akad7);
+        kilatEventsAkad.setAkad8(akad8);
+        kilatEventsAkad.setAkad9(akad9);
+        kilatEventsAkad.setAkad10(akad10);
+        kilatEventsAkad.setAkad11(akad11);
+        kilatEventsAkad.setAkad12(akad12);
+        kilatEventsAkad.setAkad13(akad13);
+        kilatEventsAkad.setAkad14(akad14);
+        kilatEventsAkad.setAkad15(akad15);
+
+        EventBus eventBus = GreenRobotEventBus.getInstance();
+        eventBus.post(kilatEventsAkad);
     }
 
     @Override

@@ -7,7 +7,10 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -46,9 +49,15 @@ public class KilatActivity extends AppCompatActivity implements KilatViewMvp {
     @BindView(R.id.desc_txt)
     EditText mDescTxt;
 
+    @BindView(R.id.confirm_btn)
+    Button mConfirmBtn;
+
+    @BindView(R.id.kilat_progress)
+    ProgressBar progressBar;
+
     @BindView(R.id.tipeLaundryValue)
     TextView mTipeLaundryValue;
-    //    @BindView(R.id.waktuPemesananValue)
+//    @BindView(R.id.waktuPemesananValue)
 //    TextView mWaktuPesananValue;
     @BindView(R.id.waktuSelesaiValue)
     TextView mWaktuSelesaiValue;
@@ -391,8 +400,340 @@ public class KilatActivity extends AppCompatActivity implements KilatViewMvp {
         mAlamatPengirimanValueRoom.setText(room);
     }
 
-    public void setTextAkad1(String text){
+    @Override
+    public void setTextAkad1(String text) {
+        Log.d("akad1 activity",""+text);
+        txt1.setText(text);
+    }
 
+    @Override
+    public void setTextAkad2(String text) {
+        txt2.setText(text);
+    }
+
+    @Override
+    public void setTextAkad3(String text) {
+        txt3.setText(text);
+    }
+
+    @Override
+    public void setTextAkad4(String text) {
+        txt4.setText(text);
+    }
+
+    @Override
+    public void setTextAkad5(String text) {
+        txt5.setText(text);
+    }
+
+    @Override
+    public void setTextAkad6(String text) {
+        txt6.setText(text);
+    }
+
+    @Override
+    public void setTextAkad7(String text) {
+        txt7.setText(text);
+    }
+
+    @Override
+    public void setTextAkad8(String text) {
+        txt8.setText(text);
+    }
+
+    @Override
+    public void setTextAkad9(String text) {
+        txt9.setText(text);
+    }
+
+    @Override
+    public void setTextAkad10(String text) {
+        txt10.setText(text);
+    }
+
+    @Override
+    public void setTextAkad11(String text) {
+        txt11.setText(text);
+    }
+
+    @Override
+    public void setTextAkad12(String text) {
+        txt12.setText(text);
+    }
+
+    @Override
+    public void setTextAkad13(String text) {
+        txt13.setText(text);
+    }
+
+    @Override
+    public void setTextAkad14(String text) {
+        txt14.setText(text);
+    }
+
+    @Override
+    public void setTextAkad15(String text) {
+        txt15.setText(text);
+    }
+
+    @Override
+    public void setAkad1Gone() {
+        rel1.setVisibility(View.GONE);
+    }
+
+    @Override
+    public void setAkad2Gone() {
+        rel2.setVisibility(View.GONE);
+    }
+
+    @Override
+    public void setAkad3Gone() {
+        rel3.setVisibility(View.GONE);
+    }
+
+    @Override
+    public void setAkad4Gone() {
+        rel4.setVisibility(View.GONE);
+    }
+
+    @Override
+    public void setAkad5Gone() {
+        rel5.setVisibility(View.GONE);
+    }
+
+    @Override
+    public void setAkad6Gone() {
+        rel6.setVisibility(View.GONE);
+    }
+
+    @Override
+    public void setAkad7Gone() {
+        rel7.setVisibility(View.GONE);
+    }
+
+    @Override
+    public void setAkad8Gone() {
+        rel8.setVisibility(View.GONE);
+    }
+
+    @Override
+    public void setAkad9Gone() {
+        rel9.setVisibility(View.GONE);
+    }
+
+    @Override
+    public void setAkad10Gone() {
+        rel10.setVisibility(View.GONE);
+    }
+
+    @Override
+    public void setAkad11Gone() {
+        rel11.setVisibility(View.GONE);
+    }
+
+    @Override
+    public void setAkad12Gone() {
+        rel12.setVisibility(View.GONE);
+    }
+
+    @Override
+    public void setAkad13Gone() {
+        rel13.setVisibility(View.GONE);
+    }
+
+    @Override
+    public void setAkad14Gone() {
+        rel14.setVisibility(View.GONE);
+    }
+
+    @Override
+    public void setAkad15Gone() {
+        rel15.setVisibility(View.GONE);
+    }
+
+    @Override
+    public void setAkad1Visible() {
+        rel1.setVisibility(View.VISIBLE);
+    }
+
+    @Override
+    public void setAkad2Visible() {
+        rel2.setVisibility(View.VISIBLE);
+    }
+
+    @Override
+    public void setAkad3Visible() {
+        rel3.setVisibility(View.VISIBLE);
+    }
+
+    @Override
+    public void setAkad4Visible() {
+        rel4.setVisibility(View.VISIBLE);
+    }
+
+    @Override
+    public void setAkad5Visible() {
+        rel5.setVisibility(View.VISIBLE);
+    }
+
+    @Override
+    public void setAkad6Visible() {
+        rel6.setVisibility(View.VISIBLE);
+    }
+
+    @Override
+    public void setAkad7Visible() {
+        rel7.setVisibility(View.VISIBLE);
+    }
+
+    @Override
+    public void setAkad8Visible() {
+        rel8.setVisibility(View.VISIBLE);
+    }
+
+    @Override
+    public void setAkad9Visible() {
+        rel9.setVisibility(View.VISIBLE);
+    }
+
+    @Override
+    public void setAkad10Visible() {
+        rel10.setVisibility(View.VISIBLE);
+    }
+
+    @Override
+    public void setAkad11Visible() {
+        rel11.setVisibility(View.VISIBLE);
+    }
+
+    @Override
+    public void setAkad12Visible() {
+        rel12.setVisibility(View.VISIBLE);
+    }
+
+    @Override
+    public void setAkad13Visible() {
+        rel13.setVisibility(View.VISIBLE);
+    }
+
+    @Override
+    public void setAkad14Visible() {
+        rel14.setVisibility(View.VISIBLE);
+    }
+
+    @Override
+    public void setAkad15Visible() {
+        rel15.setVisibility(View.VISIBLE);
+    }
+
+    @Override
+    public void enableInputs(){
+        setInputs(true);
+    }
+
+    @Override
+    public void disableInputs(){
+        setInputs(false);
+    }
+
+    @Override
+    public void setInputs(Boolean enabeled) {
+        mDescTxt.setEnabled(enabeled);
+        mConfirmBtn.setEnabled(enabeled);
+
+        mBandanaMin.setEnabled(enabeled);
+        mTopiMin.setEnabled(enabeled);
+        mMaskerMin.setEnabled(enabeled);
+        mKuplukMin.setEnabled(enabeled);
+        mKrudungMin.setEnabled(enabeled);
+        mPeciMin.setEnabled(enabeled);
+
+        mBandanaPls.setEnabled(enabeled);
+        mTopiPls.setEnabled(enabeled);
+        mMaskerPls.setEnabled(enabeled);
+        mKuplukPls.setEnabled(enabeled);
+        mKrudungPls.setEnabled(enabeled);
+        mPeciPls.setEnabled(enabeled);
+
+        mKaosMin.setEnabled(enabeled);
+        mKaosDalamMin.setEnabled(enabeled);
+        mKemejaMin.setEnabled(enabeled);
+        mBajuMuslimMin.setEnabled(enabeled);
+        mJaketMin.setEnabled(enabeled);
+        mSweterMin.setEnabled(enabeled);
+        mGamisMin.setEnabled(enabeled);
+        mHandukMin.setEnabled(enabeled);
+
+        mKaosPls.setEnabled(enabeled);
+        mKaosDalamPls.setEnabled(enabeled);
+        mKemejaPls.setEnabled(enabeled);
+        mBajuMuslimPls.setEnabled(enabeled);
+        mJaketPls.setEnabled(enabeled);
+        mSweterPls.setEnabled(enabeled);
+        mGamisPls.setEnabled(enabeled);
+        mHandukPls.setEnabled(enabeled);
+
+        mSarungTanganMin.setEnabled(enabeled);
+        mSapuTanganMin.setEnabled(enabeled);
+
+        mSarungTanganPls.setEnabled(enabeled);
+        mSapuTanganPls.setEnabled(enabeled);
+
+        mCelanaMIn.setEnabled(enabeled);
+        mCelanaDalamMin.setEnabled(enabeled);
+        mCelanaPendekMin.setEnabled(enabeled);
+        mSarungMin.setEnabled(enabeled);
+        mCelanaOlahragaMin.setEnabled(enabeled);
+        mRokMin.setEnabled(enabeled);
+        mCelanaLevisMin.setEnabled(enabeled);
+        mKaosKakiMin.setEnabled(enabeled);
+
+        mCelanaPls.setEnabled(enabeled);
+        mCelanaDalamPls.setEnabled(enabeled);
+        mCelanaPendekPls.setEnabled(enabeled);
+        mSarungPls.setEnabled(enabeled);
+        mCelanaOlahragaPls.setEnabled(enabeled);
+        mRokPls.setEnabled(enabeled);
+        mCelanaLevisPls.setEnabled(enabeled);
+        mKaosKakiPls.setEnabled(enabeled);
+
+        mJasAlmamaterMin.setEnabled(enabeled);
+        mJasMin.setEnabled(enabeled);
+        mSelimutKecilMin.setEnabled(enabeled);
+        mSelimutBesarMin.setEnabled(enabeled);
+        mBagCoverMin.setEnabled(enabeled);
+        mGordengKecilMIn.setEnabled(enabeled);
+        mGordengBesarMin.setEnabled(enabeled);
+        mSepatuMin.setEnabled(enabeled);
+        mBantalMin.setEnabled(enabeled);
+        mTasKecilMin.setEnabled(enabeled);
+        mTasBesarMin.setEnabled(enabeled);
+        mSpreiKecilMin.setEnabled(enabeled);
+        mSpreiBesarMin.setEnabled(enabeled);
+
+        mJasAlmamaterPls.setEnabled(enabeled);
+        mJasPls.setEnabled(enabeled);
+        mSelimutKecilPls.setEnabled(enabeled);
+        mSelimutBesarPls.setEnabled(enabeled);
+        mBagCoverPls.setEnabled(enabeled);
+        mGordengKecilPls.setEnabled(enabeled);
+        mGordengBesarPls.setEnabled(enabeled);
+        mSepatuPls.setEnabled(enabeled);
+        mBantalPls.setEnabled(enabeled);
+        mTasKecilPls.setEnabled(enabeled);
+        mTasBesarPls.setEnabled(enabeled);
+        mSpreiKecilPls.setEnabled(enabeled);
+        mSpreiBesarPls.setEnabled(enabeled);
+    }
+
+    @Override
+    public void showProgress(){
+        progressBar.setVisibility(View.VISIBLE);
+    }
+
+    @Override
+    public void hideProgress(){
+        progressBar.setVisibility(View.GONE);
     }
 
     @Override
@@ -403,7 +744,7 @@ public class KilatActivity extends AppCompatActivity implements KilatViewMvp {
 
     @Override
     public void getDataProfile() {
-        mKilatPresenterMvp.getProfileData();
+        mKilatPresenterMvp.getData();
     }
 
     @Override

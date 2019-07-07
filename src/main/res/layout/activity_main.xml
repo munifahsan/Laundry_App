@@ -16,9 +16,9 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_alignParentBottom="true"
-        android:background="@color/biruLaut"
+        android:background="@color/putih"
         app:menu="@menu/navigation"
-        app:itemIconSize="20dp"
+        app:itemIconSize="22dp"
         app:itemIconTint="@drawable/state_bnve"
         app:itemTextColor="@drawable/state_bnve"/>
 

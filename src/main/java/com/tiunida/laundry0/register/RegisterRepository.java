@@ -30,19 +30,10 @@ public class RegisterRepository implements RegisterRepositoryMvp {
 
                 if (task.isSuccessful()){
 
-//                    dialog.dismiss();
-                    Log.d(TAG, "signInWithEmail:success");
-//
-//                    Intent setupIntent = new Intent(mContect, SetupActivity.class);
-//                    mContect.startActivity(setupIntent);
                     postEvent(RegisterEvent.onSignUpSuccess);
 
                 }else {
-//                    dialog.dismiss();
-//                    Log.w(TAG, "signInWithEmail:failure", task.getException());
-//
-//                    String errorMessage = task.getException().getMessage();
-//                    Toast.makeText(mContect, "Error : " + errorMessage, Toast.LENGTH_LONG).show();
+
                     postEvent(RegisterEvent.onSignUpError);
                 }
 

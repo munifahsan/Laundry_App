@@ -9,7 +9,12 @@ public class ExpressInteractor implements ExpressInteractorMvp{
     }
 
     @Override
-    public void getData() {
+    public void getAkadData() {
+        mExpressRepository.getAkadData();
+    }
+
+    @Override
+    public void getProfileData() {
         mExpressRepository.getProfileData();
     }
 

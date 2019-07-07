@@ -2,7 +2,10 @@ package com.tiunida.laundry0.order.biasa;
 
 public interface BiasaInteractorMvp {
 
-    void getData();
+    void getProfileData();
+
+    void getAkadData();
+
     void doInputs(String desc, String time, String uniqId, String timeDone,
                   String bandana, String topi, String masker, String kupluk, String krudung, String peci,
                   String kaos, String kaos_dalam, String kemeja, String baju_muslim, String jaket, String sweter, String gamis, String handuk,

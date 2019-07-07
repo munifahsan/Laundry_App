@@ -14,7 +14,8 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.tiunida.laundry0.eventBus.EventBus;
 import com.tiunida.laundry0.eventBus.GreenRobotEventBus;
-import com.tiunida.laundry0.order.kilat.events.KilatEvents;
+import com.tiunida.laundry0.order.kilat.events.KilatEventsProfile;
+import com.tiunida.laundry0.order.kilat.events.KilatEventsAkad;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -45,13 +46,11 @@ public class KilatRepository implements KilatRepositoryMvp {
                         String dormitory = task.getResult().getString("2 dormitory");
                         String test = task.getResult().getString("done");
 
-                        Log.d("dona data ", "" + test);
-
-                        postEvent(KilatEvents.onGetDataSuccess, null, dormitory, room);
+                        postEvent(KilatEventsProfile.onGetDataSuccess, null, dormitory, room);
                     }
                 } else {
                     String errorMessage = task.getException().getMessage();
-                    postEvent(KilatEvents.onGetDataError, errorMessage);
+                    postEvent(KilatEventsProfile.onGetDataError, errorMessage);
                 }
             }
         });
@@ -83,11 +82,13 @@ public class KilatRepository implements KilatRepositoryMvp {
                         String akad14 = task.getResult().getString("14");
                         String akad15 = task.getResult().getString("15");
 
-                        postEvent(KilatEvents.onGetDataSuccess, null, akad1, akad2, akad3, akad4, akad5, akad6, akad7, akad8, akad9, akad10, akad11, akad12, akad13, akad14, akad15);
+                        Log.d("akad1 repo",""+akad1);
+
+                        postEvent(KilatEventsAkad.onGetDataSuccess, null, akad1, akad2, akad3, akad4, akad5, akad6, akad7, akad8, akad9, akad10, akad11, akad12, akad13, akad14, akad15);
                     }
                 } else {
                     String errorMessage = task.getException().getMessage();
-                    postEvent(KilatEvents.onGetDataError, errorMessage);
+                    //postEvent(KilatEventsProfile.onGetDataError, errorMessage);
                 }
             }
         });
@@ -162,10 +163,10 @@ public class KilatRepository implements KilatRepositoryMvp {
             public void onComplete(@NonNull Task<DocumentReference> task) {
                 if (task.isSuccessful()) {
                     Log.d("masuk isSuccess ", " ya");
-                    postEvent(KilatEvents.onInputSuccess);
+                    postEvent(KilatEventsProfile.onInputSuccess);
                 } else {
                     String errorMessage = task.getException().getMessage();
-                    postEvent(KilatEvents.onInputError, errorMessage);
+                    postEvent(KilatEventsProfile.onInputError, errorMessage);
                     Log.d("error nya ", "" + errorMessage);
                 }
             }
@@ -174,46 +175,45 @@ public class KilatRepository implements KilatRepositoryMvp {
 
     @Override
     public void postEvent(int type, String errorMessage, String dataRoom, String dataDormitory) {
-        KilatEvents kilatEvents = new KilatEvents();
-        kilatEvents.setEventType(type);
+        KilatEventsProfile kilatEventsProfile = new KilatEventsProfile();
+        kilatEventsProfile.setEventType(type);
         Log.d("masuk post", "masuk post event succes not null");
         if (errorMessage == null) {
-            kilatEvents.setErrorMessage(errorMessage);
+            kilatEventsProfile.setErrorMessage(errorMessage);
         }
-        kilatEvents.setDataRoom(dataRoom);
-        kilatEvents.setDataDormitory(dataDormitory);
+        kilatEventsProfile.setDataRoom(dataRoom);
+        kilatEventsProfile.setDataDormitory(dataDormitory);
 
         EventBus eventBus = GreenRobotEventBus.getInstance();
-        eventBus.post(kilatEvents);
+        eventBus.post(kilatEventsProfile);
     }
 
     @Override
     public void postEvent(int type, String errorMessage, String akad1, String akad2, String akad3, String akad4, String akad5, String akad6, String akad7, String akad8, String akad9, String akad10, String akad11, String akad12, String akad13, String akad14, String akad15) {
-        KilatEvents kilatEvents = new KilatEvents();
-        kilatEvents.setEventType(type);
+        KilatEventsAkad kilatEventsAkad = new KilatEventsAkad();
+        kilatEventsAkad.setEventType(type);
         Log.d("masuk post", "masuk post event succes not null");
-        if (errorMessage == null) {
-            kilatEvents.setErrorMessage(errorMessage);
-        }
-
-        kilatEvents.setAkad1(akad1);
-        kilatEvents.setAkad2(akad2);
-        kilatEvents.setAkad3(akad3);
-        kilatEvents.setAkad4(akad4);
-        kilatEvents.setAkad5(akad5);
-        kilatEvents.setAkad6(akad6);
-        kilatEvents.setAkad7(akad7);
-        kilatEvents.setAkad8(akad8);
-        kilatEvents.setAkad9(akad9);
-        kilatEvents.setAkad10(akad10);
-        kilatEvents.setAkad11(akad11);
-        kilatEvents.setAkad12(akad12);
-        kilatEvents.setAkad13(akad13);
-        kilatEvents.setAkad14(akad14);
-        kilatEvents.setAkad15(akad15);
+//        if (errorMessage == null) {
+//            kilatEvents.setErrorMessage(errorMessage);
+//        }
+        kilatEventsAkad.setAkad1(akad1);
+        kilatEventsAkad.setAkad2(akad2);
+        kilatEventsAkad.setAkad3(akad3);
+        kilatEventsAkad.setAkad4(akad4);
+        kilatEventsAkad.setAkad5(akad5);
+        kilatEventsAkad.setAkad6(akad6);
+        kilatEventsAkad.setAkad7(akad7);
+        kilatEventsAkad.setAkad8(akad8);
+        kilatEventsAkad.setAkad9(akad9);
+        kilatEventsAkad.setAkad10(akad10);
+        kilatEventsAkad.setAkad11(akad11);
+        kilatEventsAkad.setAkad12(akad12);
+        kilatEventsAkad.setAkad13(akad13);
+        kilatEventsAkad.setAkad14(akad14);
+        kilatEventsAkad.setAkad15(akad15);
 
         EventBus eventBus = GreenRobotEventBus.getInstance();
-        eventBus.post(kilatEvents);
+        eventBus.post(kilatEventsAkad);
     }
 
     @Override

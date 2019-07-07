@@ -1,10 +1,13 @@
 package com.tiunida.laundry0.order.kilat;
 
+import android.util.Log;
+
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.tiunida.laundry0.eventBus.EventBus;
 import com.tiunida.laundry0.eventBus.GreenRobotEventBus;
-import com.tiunida.laundry0.order.kilat.events.KilatEvents;
+import com.tiunida.laundry0.order.kilat.events.KilatEventsProfile;
+import com.tiunida.laundry0.order.kilat.events.KilatEventsAkad;
 import com.tiunida.laundry0.order.kilat.ui.KilatViewMvp;
 
 import org.greenrobot.eventbus.Subscribe;
@@ -35,20 +38,47 @@ public class KilatPresenter implements KilatPresenterMvp {
     public void inputs(String desc, String time, String uniqId, String timeDone, String bandana, String topi, String masker, String kupluk, String krudung, String peci, String kaos, String kaos_dalam, String kemeja, String baju_muslim, String jaket, String sweter, String gamis, String handuk, String sarung_tangan, String sapu_tangan, String celana, String celana_dalam, String celana_pendek, String sarung, String celana_olahraga, String rok, String celana_levis, String kaos_kaki, String jas_almamater, String jas, String selimut_kecil, String selimut_besar, String bag_cover, String gordeng_kecil, String gordeng_besar, String sepatu, String bantal, String tas_kecil, String tas_besar, String sprei_kecil, String sprei_besar) {
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         if (user != null) {
-            mKilatInteractorMvp.doInputs(desc, time, uniqId, timeDone, bandana, topi, masker, kupluk, krudung, peci, kaos, kaos_dalam, kemeja, baju_muslim, jaket, sweter, gamis, handuk, sarung_tangan, sapu_tangan, celana, celana_dalam, celana_pendek, sarung, celana_olahraga, rok, celana_levis, kaos_kaki, jas_almamater, jas, selimut_kecil, selimut_besar, bag_cover, gordeng_kecil, gordeng_besar, sepatu, bantal, tas_kecil, tas_besar, sprei_kecil, sprei_besar);
+            mKilatViewMvp.showProgress();
+            mKilatViewMvp.disableInputs();
         }
+        mKilatInteractorMvp.doInputs(desc, time, uniqId, timeDone, bandana, topi, masker, kupluk, krudung, peci, kaos, kaos_dalam, kemeja, baju_muslim, jaket, sweter, gamis, handuk, sarung_tangan, sapu_tangan, celana, celana_dalam, celana_pendek, sarung, celana_olahraga, rok, celana_levis, kaos_kaki, jas_almamater, jas, selimut_kecil, selimut_besar, bag_cover, gordeng_kecil, gordeng_besar, sepatu, bantal, tas_kecil, tas_besar, sprei_kecil, sprei_besar);
     }
 
     @Override
     @Subscribe
-    public void onEventMainThread(KilatEvents event) {
+    public void onEventMainThread(KilatEventsProfile event) {
         switch (event.getEventType()) {
-            case KilatEvents.onInputSuccess:
+            case KilatEventsProfile.onInputSuccess:
                 onInputSuccess();
                 break;
-            case KilatEvents.onGetDataSuccess:
-                onGetDataProfileSuccess(event.getDataRoom(), event.getDataDormitory());
-                onGetDataAkadSuccess(event.getAkad1(),event.getAkad2(),event.getAkad3(),event.getAkad4(),event.getAkad5(),event.getAkad6(),event.getAkad7(),event.getAkad8(),event.getAkad9(),event.getAkad10(),event.getAkad11(),event.getAkad12(),event.getAkad13(),event.getAkad14(),event.getAkad15());
+            case KilatEventsProfile.onInputError:
+
+                break;
+            case KilatEventsProfile.onGetDataSuccess:
+                onGetDataSuccess(event.getDataRoom(), event.getDataDormitory());
+                Log.d("akad1 room", "" + event.getDataRoom());
+                break;
+            case KilatEventsProfile.onGetDataError:
+
+                break;
+        }
+    }
+
+    @Subscribe
+    public void onEventMainThread(KilatEventsAkad event) {
+        switch (event.getEventType()) {
+            case KilatEventsAkad.onInputSuccess:
+
+                break;
+            case KilatEventsAkad.onGetDataError:
+
+                break;
+            case KilatEventsAkad.onGetDataSuccess:
+                onGetDataSuccess(event.getAkad1(), event.getAkad2(), event.getAkad3(), event.getAkad4(), event.getAkad5(), event.getAkad6(), event.getAkad7(), event.getAkad8(), event.getAkad9(), event.getAkad10(), event.getAkad11(), event.getAkad12(), event.getAkad13(), event.getAkad14(), event.getAkad15());
+                Log.d("akad1", "" + event.getAkad1());
+                break;
+            case KilatEventsAkad.onInputError:
+
                 break;
         }
     }
@@ -65,22 +95,109 @@ public class KilatPresenter implements KilatPresenterMvp {
     }
 
     @Override
-    public void getProfileData() {
+    public void getData() {
         mKilatInteractorMvp.getProfileData();
-    }
-
-    @Override
-    public void getAkadData(){
         mKilatInteractorMvp.getAkadData();
     }
 
-    @Override
-    public void onGetDataProfileSuccess(String dataRoom, String dataDormitory) {
+    public void onGetDataSuccess(String dataRoom, String dataDormitory) {
         mKilatViewMvp.setRoomDormitory(dataRoom, dataDormitory);
     }
 
-    public void onGetDataAkadSuccess(String akad1, String akad2, String akad3, String akad4, String akad5, String akad6, String akad7, String akad8, String akad9, String akad10, String akad11, String akad12, String akad13, String akad14, String akad15){
+    public void onGetDataSuccess(String akad1, String akad2, String akad3, String akad4, String akad5, String akad6, String akad7, String akad8, String akad9, String akad10, String akad11, String akad12, String akad13, String akad14, String akad15) {
 
+        if (mKilatViewMvp != null) {
+            mKilatViewMvp.hideProgress();
+            if (!akad1.equals("")) {
+                mKilatViewMvp.setTextAkad1(akad1);
+            } else {
+                mKilatViewMvp.setAkad1Gone();
+            }
+
+            if (!akad2.equals("")) {
+                mKilatViewMvp.setTextAkad2(akad2);
+            } else {
+                mKilatViewMvp.setAkad2Gone();
+            }
+
+            if (!akad3.equals("")) {
+                mKilatViewMvp.setTextAkad3(akad3);
+            } else {
+                mKilatViewMvp.setAkad3Gone();
+            }
+
+            if (!akad4.equals("")) {
+                mKilatViewMvp.setTextAkad4(akad4);
+            } else {
+                mKilatViewMvp.setAkad4Gone();
+            }
+
+            if (!akad5.equals("")) {
+                mKilatViewMvp.setTextAkad5(akad5);
+            } else {
+                mKilatViewMvp.setAkad5Gone();
+            }
+
+            if (!akad6.equals("")) {
+                mKilatViewMvp.setTextAkad6(akad6);
+            } else {
+                mKilatViewMvp.setAkad6Gone();
+            }
+
+            if (!akad7.equals("")) {
+                mKilatViewMvp.setTextAkad7(akad7);
+            } else {
+                mKilatViewMvp.setAkad7Gone();
+            }
+
+            if (!akad8.equals("")) {
+                mKilatViewMvp.setTextAkad8(akad8);
+            } else {
+                mKilatViewMvp.setAkad8Gone();
+            }
+
+            if (!akad9.equals("")) {
+                mKilatViewMvp.setTextAkad9(akad9);
+            } else {
+                mKilatViewMvp.setAkad9Gone();
+            }
+
+            if (!akad10.equals("")) {
+                mKilatViewMvp.setTextAkad10(akad10);
+            } else {
+                mKilatViewMvp.setAkad10Gone();
+            }
+
+            if (!akad11.equals("")) {
+                mKilatViewMvp.setTextAkad11(akad11);
+            } else {
+                mKilatViewMvp.setAkad11Gone();
+            }
+
+            if (!akad12.equals("")) {
+                mKilatViewMvp.setTextAkad12(akad12);
+            } else {
+                mKilatViewMvp.setAkad12Gone();
+            }
+
+            if (!akad13.equals("")) {
+                mKilatViewMvp.setTextAkad13(akad13);
+            } else {
+                mKilatViewMvp.setAkad13Gone();
+            }
+
+            if (!akad14.equals("")) {
+                mKilatViewMvp.setTextAkad14(akad14);
+            } else {
+                mKilatViewMvp.setAkad14Gone();
+            }
+
+            if (!akad15.equals("")) {
+                mKilatViewMvp.setTextAkad15(akad15);
+            } else {
+                mKilatViewMvp.setAkad15Gone();
+            }
+        }
     }
 
     @Override

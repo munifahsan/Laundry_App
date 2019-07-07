@@ -1,7 +1,6 @@
-package com.tiunida.laundry0.order.express.events;
+package com.tiunida.laundry0.order.kilat.events;
 
-public class ExpressEvents {
-
+public class KilatEventsProfile {
     public static final int onInputError = 0;
     public static final int onInputSuccess = 1;
     public static final int onGetDataSuccess = 2;
@@ -11,6 +10,7 @@ public class ExpressEvents {
     private String errorMessage;
     private String dataRoom;
     private String dataDormitory;
+
 
     public int getEventType() {
         return eventType;
@@ -43,4 +43,5 @@ public class ExpressEvents {
     public void setDataDormitory(String dataDormitory) {
         this.dataDormitory = dataDormitory;
     }
+
 }

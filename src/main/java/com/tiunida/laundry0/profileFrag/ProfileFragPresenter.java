@@ -43,7 +43,6 @@ public class ProfileFragPresenter implements ProfileFragPresenterMvp {
                 Log.d("getDataSucces","masuk");
                 onGetDataSuccess(events.getDataName(),events.getDataNim(),events.getDataDormitory(),events.getDataRoom(),events.getDataPhone(),events.getDataStatus(),events.getDataGender());
                 break;
-
         }
     }
 
