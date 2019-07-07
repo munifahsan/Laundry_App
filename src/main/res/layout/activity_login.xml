@@ -42,7 +42,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="64dp"
+                android:layout_marginTop="70dp"
                 android:layout_marginEnd="8dp"
                 android:background="@drawable/text_field_border"
                 android:ems="10"
@@ -114,7 +114,7 @@
                 android:id="@+id/login_register"
                 android:layout_width="match_parent"
                 android:layout_height="43dp"
-                android:background="@color/putih"
+                android:background="@android:color/transparent"
                 android:text="Register"
                 android:textColor="@color/biruLaut"
                 android:textSize="12sp"
@@ -127,9 +127,9 @@
             <Button
                 android:id="@+id/forget_pass"
                 android:layout_width="match_parent"
-                android:layout_height="43dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="75dp"
-                android:background="@color/putih"
+                android:background="@android:color/transparent"
                 android:text="Forget Password ?"
                 android:textColor="@color/biruLaut"
                 android:textSize="12sp"
@@ -143,12 +143,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="68dp"
+                android:layout_marginTop="80dp"
                 android:layout_marginEnd="8dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/laundry_unida" />
+                app:srcCompat="@drawable/sign_in" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </ScrollView>

@@ -6,7 +6,31 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
+        <item name="android:buttonStyle">@style/ButtonTheme</item>
+        <item name="buttonStyle">@style/ButtonTheme</item>
     </style>
 
+    <style name="ButtonTheme" parent="android:Widget.Button">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:background">@android:color/darker_gray</item>
+        <item name="android:typeface">monospace</item>
+        <item name="android:textSize">32sp</item>
+    </style>
+
+    <style name="AppThemeDua" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="RoundedCornerButton" parent="android:Widget.Material.Button">
+        <item name="android:background">@drawable/btn_background</item>
+        <item name="background">@drawable/btn_background</item>
+    </style>
 
 </resources>

@@ -1,0 +1,552 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/biruMuda"
+    android:orientation="vertical"
+    tools:context=".orderDetail.ui.OrderDetailActivity">
+
+    <ProgressBar
+        android:id="@+id/order_detail_progress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:indeterminate="true"
+        android:visibility="visible" />
+
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/putih"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:title="@string/order_title"
+                app:titleTextColor="@color/biruLaut" />
+        </com.google.android.material.appbar.AppBarLayout>
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:id="@+id/no_rel"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/putih">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="24dp"
+                        android:text="No Laundry"
+                        android:textColor="@color/biruLaut" />
+
+                    <TextView
+                        android:id="@+id/noLaudnry"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="24dp"
+                        android:text="02301198226"
+                        android:textColor="@color/biruLaut"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/timeDetailRel"
+                    android:layout_width="match_parent"
+                    android:layout_height="240dp"
+                    android:layout_below="@+id/no_rel"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/putih">
+
+                    <RelativeLayout
+                        android:id="@+id/tgl_ref"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:paddingStart="24dp">
+
+                        <TextView
+                            android:id="@+id/tglPesan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="4dp"
+                            android:text="Sun, 3 jan 19"
+                            android:textColor="@color/biruLaut"
+                            android:textSize="11dp" />
+
+                        <TextView
+                            android:id="@+id/tglSelesai"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginEnd="4dp"
+                            android:layout_marginBottom="22dp"
+                            android:text="Sun, 3 jan 19"
+                            android:textColor="@color/biruLaut"
+                            android:textSize="11dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/indicator_rel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@+id/tgl_ref"
+                        android:paddingTop="8dp">
+
+                        <View
+                            android:id="@+id/acceptIndicator"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:background="@drawable/circle_view_border" />
+
+                        <View
+                            android:id="@+id/acceptLine"
+                            android:layout_width="3dp"
+                            android:layout_height="30dp"
+                            android:layout_below="@+id/acceptIndicator"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/ractangle_view_putih" />
+
+                        <View
+                            android:id="@+id/prosesIndicator"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_below="@+id/acceptLine"
+                            android:background="@drawable/circle_view_border" />
+
+                        <View
+                            android:id="@+id/prosesLine"
+                            android:layout_width="3dp"
+                            android:layout_height="30dp"
+                            android:layout_below="@+id/prosesIndicator"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/ractangle_view_putih" />
+
+                        <View
+                            android:id="@+id/doneIndicator"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_below="@+id/prosesLine"
+                            android:background="@drawable/circle_view_border" />
+
+                        <View
+                            android:id="@+id/doneLine"
+                            android:layout_width="3dp"
+                            android:layout_height="30dp"
+                            android:layout_below="@+id/doneIndicator"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/ractangle_view_putih" />
+
+                        <View
+                            android:id="@+id/paidIndicator"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_below="@+id/doneLine"
+                            android:background="@drawable/circle_view_border" />
+
+                        <View
+                            android:id="@+id/paidLine"
+                            android:layout_width="3dp"
+                            android:layout_height="30dp"
+                            android:layout_below="@+id/paidIndicator"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/ractangle_view_putih" />
+
+                        <View
+                            android:id="@+id/deliveredIndicator"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_below="@+id/paidLine"
+                            android:background="@drawable/circle_view_border" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_toEndOf="@+id/indicator_rel"
+                        android:paddingEnd="24dp">
+
+                        <TextView
+                            android:id="@+id/acceptedTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:layout_marginTop="6dp"
+                            android:text="Accepted"
+                            android:textColor="@color/biruLaut" />
+
+                        <TextView
+                            android:id="@+id/acceptedDesc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/acceptedTxt"
+                            android:layout_marginStart="4dp"
+                            android:text="Your clothes have been taken and will be processed"
+                            android:textColor="@color/biruLaut"
+                            android:textSize="11dp"
+                            android:textStyle="italic" />
+
+                        <TextView
+                            android:id="@+id/prosesTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:layout_marginTop="53dp"
+                            android:text="On Proses"
+                            android:textColor="@color/biruLaut" />
+
+                        <TextView
+                            android:id="@+id/prosesDesc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/prosesTxt"
+                            android:layout_marginStart="4dp"
+                            android:text="Your clothes have been  processed"
+                            android:textColor="@color/biruLaut"
+                            android:textSize="11dp"
+                            android:textStyle="italic" />
+
+                        <TextView
+                            android:id="@+id/doneTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:layout_marginTop="102dp"
+                            android:text="Done"
+                            android:textColor="@color/biruLaut" />
+
+                        <TextView
+                            android:id="@+id/doneDesc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/doneTxt"
+                            android:layout_marginStart="4dp"
+                            android:text="Your clothes have been washed and ready to be delivered"
+                            android:textColor="@color/biruLaut"
+                            android:textSize="11dp"
+                            android:textStyle="italic" />
+
+                        <TextView
+                            android:id="@+id/paidTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:layout_marginTop="150dp"
+                            android:text="Paid"
+                            android:textColor="@color/biruLaut" />
+
+                        <TextView
+                            android:id="@+id/paidDesc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/paidTxt"
+                            android:layout_marginStart="4dp"
+                            android:text="your clothes have been paid off"
+                            android:textColor="@color/biruLaut"
+                            android:textSize="11dp"
+                            android:textStyle="italic" />
+
+                        <TextView
+                            android:id="@+id/deliveredTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:layout_marginTop="198dp"
+                            android:text="Delivered"
+                            android:textColor="@color/biruLaut" />
+
+                        <TextView
+                            android:id="@+id/deliveredDesc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/deliveredTxt"
+                            android:layout_marginStart="4dp"
+                            android:text="your clothes have been delivered"
+                            android:textColor="@color/biruLaut"
+                            android:textSize="11dp"
+                            android:textStyle="italic" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/typeRel"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/timeDetailRel"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/putih">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="24dp"
+                        android:text="Tipe Laundry"
+                        android:textColor="@color/biruLaut" />
+
+                    <TextView
+                        android:id="@+id/laudnryType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="24dp"
+                        android:text="--"
+                        android:textColor="@color/biruLaut"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/weightRel"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/typeRel"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/putih">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="24dp"
+                        android:text="Berat"
+                        android:textColor="@color/biruLaut" />
+
+                    <TextView
+                        android:id="@+id/laudryWeight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@+id/laudryWeightKg"
+                        android:text="-- "
+                        android:textColor="@color/biruLaut"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/laudryWeightKg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="24dp"
+                        android:text="Kg"
+                        android:textColor="@color/biruLaut"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/originalPriceRel"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/weightRel"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/putih">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="24dp"
+                        android:text="Harga"
+                        android:textColor="@color/biruLaut" />
+
+                    <TextView
+                        android:id="@+id/originalPriceRp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@+id/originalPrice"
+                        android:text="Rp."
+                        android:textColor="@color/biruLaut"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/originalPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="24dp"
+                        android:text="--"
+                        android:textColor="@color/biruLaut"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/diskonRel"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/originalPriceRel"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/putih">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="24dp"
+                        android:text="Diskon"
+                        android:textColor="@color/biruLaut" />
+
+                    <TextView
+                        android:id="@+id/laudryDiskon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@+id/laudryDiskonPrsn"
+                        android:text="--"
+                        android:textColor="@color/biruLaut"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/laudryDiskonPrsn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="24dp"
+                        android:text="%"
+                        android:textColor="@color/biruLaut"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/priceRel"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/diskonRel"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/putih">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="24dp"
+                        android:text="Total Harga"
+                        android:textColor="@color/biruLaut" />
+
+                    <TextView
+                        android:id="@+id/laundryPriceRp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@+id/laundryPrice"
+                        android:text="Rp."
+                        android:textColor="@color/biruLaut"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/laundryPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="24dp"
+                        android:text="--"
+                        android:textColor="@color/biruLaut"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/clothes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/priceRel"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/biruMuda"
+                    android:paddingStart="24dp"
+                    android:paddingTop="4dp"
+                    android:paddingEnd="24dp"
+                    android:paddingBottom="8dp">
+
+                    <TextView
+                        android:id="@+id/clothesTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Jumlah Pakaian"
+                        android:textColor="@color/biruLaut"
+                        android:textStyle="bold" />
+
+                    <include
+                        android:id="@+id/layHeadList"
+                        layout="@layout/item_detail_head_list"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/clothesTxt"
+                        android:layout_marginTop="4dp" />
+
+                    <include
+                        android:id="@+id/layBodyList"
+                        layout="@layout/item_detail_body_list"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/layHeadList" />
+
+                    <include
+                        android:id="@+id/layHandList"
+                        layout="@layout/item_detail_hand_list"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/layBodyList"
+                        android:layout_marginTop="4dp" />
+
+                    <include
+                        android:id="@+id/layFeetList"
+                        layout="@layout/item_detail_feet_list"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/layHandList"
+                        android:layout_marginTop="4dp" />
+
+                    <include
+                        android:id="@+id/layOtherList"
+                        layout="@layout/item_detail_other_list"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/layFeetList"
+                        android:layout_marginTop="4dp" />
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/askAdminBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/clothes"
+                    android:background="@color/putih"
+                    android:text="ASK ADMIN"
+                    android:textColor="@color/biruLaut" />
+
+            </RelativeLayout>
+
+        </androidx.core.widget.NestedScrollView>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</LinearLayout>

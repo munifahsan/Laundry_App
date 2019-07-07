@@ -14,7 +14,7 @@ import com.tiunida.laundry0.orderFrag.OrderFragment;
 import com.tiunida.laundry0.R;
 import com.tiunida.laundry0.historyFrag.HistoryFragment;
 import com.tiunida.laundry0.login.ui.LoginActivity;
-import com.tiunida.laundry0.profileFrag.ProfileFragment;
+import com.tiunida.laundry0.profileFrag.ui.ProfileFragment;
 
 public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
 
@@ -29,6 +29,20 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 
         BottomNavigationView mBottomNavigationView = findViewById(R.id.bnb_tab);
         mBottomNavigationView.setOnNavigationItemSelectedListener(this);
+
+        Intent mainIntent = getIntent();
+        int tabToOpen = mainIntent.getIntExtra("tab",-1);
+        if (tabToOpen != -1){
+            getFragmentPage(new OrderFragment());
+            mBottomNavigationView.getMenu().findItem(R.id.navigation_order).setChecked(true);
+        }
+
+        Intent mainIntent2 = getIntent();
+        int tabToOpen2 = mainIntent2.getIntExtra("tab2",-2);
+        if (tabToOpen2 != -2){
+            getFragmentPage(new ProfileFragment());
+            mBottomNavigationView.getMenu().findItem(R.id.navigation_profile).setChecked(true);
+        }
     }
 
     private boolean getFragmentPage(Fragment fragment){
@@ -41,8 +55,6 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         }
         return false;
     }
-
-
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {

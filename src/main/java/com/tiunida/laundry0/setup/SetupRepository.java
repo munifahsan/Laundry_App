@@ -57,7 +57,8 @@ public class SetupRepository implements SetupRepositoryMvp{
                         // Continue with the task to get the download URL
                         return image_path.getDownloadUrl();
                     }
-                }).addOnCompleteListener(new OnCompleteListener<Uri>() {
+                })
+                        .addOnCompleteListener(new OnCompleteListener<Uri>() {
                     @Override
                     public void onComplete(@NonNull Task<Uri> task) {
                         if (task.isSuccessful()) {
@@ -88,13 +89,13 @@ public class SetupRepository implements SetupRepositoryMvp{
     public void storeFirestore(String user_name, String user_nim, String user_dormitory, String user_room, String user_phone, String gender, String status) {
 
         Map<String, String> userMap2 = new HashMap<>();
-        userMap2.put("0 name", user_name);
-        userMap2.put("1 nim" , user_nim);
-        userMap2.put("2 dormitory" , user_dormitory);
-        userMap2.put("3 room" , user_room);
-        userMap2.put("4 phone number" , user_phone);
-        userMap2.put("5 gender" , gender);
-        userMap2.put("6 status" , status);
+        userMap2.put("a_name", user_name);
+        userMap2.put("b_nim" , user_nim);
+        userMap2.put("c_dormitory" , user_dormitory);
+        userMap2.put("d_room" , user_room);
+        userMap2.put("e_phone number" , user_phone);
+        userMap2.put("f_gender" , gender);
+        userMap2.put("g_status" , status);
 
         firebaseFirestore.collection("Users").document(user_id)
                 .set(userMap2).addOnCompleteListener(new OnCompleteListener<Void>() {

@@ -16,5 +16,9 @@
     <color name="basicColor">#2699FB</color>
     <color name="hitam">#000000</color>
 
+    <color name="merah">#FF0000</color>
+
+    <color name="biru_u3">#0387C3</color>
+
 
 </resources>

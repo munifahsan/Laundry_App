@@ -1,20 +1,413 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".profileFrag.ProfileFragment">
+    android:layout_marginBottom="50dp"
+    android:background="@color/putih"
+    android:orientation="vertical"
+    tools:context=".profileFrag.ui.ProfileFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ProgressBar
+        android:id="@+id/profile_progress"
+        style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/profile_title" />
+        android:layout_height="7dp"
+        android:indeterminate="true"
+        android:visibility="visible" />
 
-    <Button
-        android:id="@+id/log_out"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button" />
 
-</FrameLayout>
+    <ScrollView
+        android:id="@+id/scrollView4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="20dp">
+
+            <Button
+                android:id="@+id/log_out"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/btn_logout_border"
+                android:enabled="false"
+                android:text="Log out"
+                android:layout_below="@+id/view14"
+                android:textColor="@color/biruLaut"
+                android:layout_centerHorizontal="true"
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_toEndOf="@+id/imageProfile"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp">
+                <Button
+                    android:id="@+id/edit_profile"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/putih"
+                    android:enabled="false"
+                    android:text="Edit profile"
+                    android:textColor="@color/biruLaut"
+                    android:layout_centerHorizontal="true" />
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/akunTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="38dp"
+                android:layout_marginEnd="8dp"
+                android:text="Akun"
+                android:textColor="@color/hitam"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imageProfile"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="14dp"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentTop="true"
+                android:src="@drawable/default_image" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="8dp"
+                android:text="Name"
+                android:textSize="12sp"
+                android:layout_below="@+id/imageProfile" />
+
+            <TextView
+                android:id="@+id/profile_profile_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginEnd="8dp"
+                android:text="--"
+                android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                android:layout_below="@+id/textView3" />
+            <View
+                android:id="@+id/view3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="24dp"
+                android:background="@android:color/darker_gray"
+                android:layout_below="@+id/profile_profile_name" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="17dp"
+                android:layout_marginEnd="8dp"
+                android:text="NIM"
+                android:textSize="12sp"
+                android:layout_below="@+id/view3" />
+            <TextView
+                android:id="@+id/profile_profile_nim"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginEnd="8dp"
+                android:text="--"
+                android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                android:layout_below="@+id/textView4" />
+            <View
+                android:id="@+id/view4"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="24dp"
+                android:background="@android:color/darker_gray"
+                android:layout_below="@+id/profile_profile_nim" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="17dp"
+                android:layout_marginEnd="8dp"
+                android:text="Dormitory"
+                android:textSize="12sp"
+                android:layout_below="@+id/view4" />
+            <TextView
+                android:id="@+id/profile_profile_dormitory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginEnd="8dp"
+                android:text="--"
+                android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                android:layout_below="@+id/textView5" />
+            <View
+                android:id="@+id/view5"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="24dp"
+                android:background="@android:color/darker_gray"
+                android:layout_below="@+id/profile_profile_dormitory" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="17dp"
+                android:layout_marginEnd="8dp"
+                android:text="Room"
+                android:textSize="12sp"
+                android:layout_below="@+id/view5" />
+            <TextView
+                android:id="@+id/profile_profile_room"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginEnd="8dp"
+                android:text="--"
+                android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                android:layout_below="@+id/textView6" />
+            <View
+                android:id="@+id/view6"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="24dp"
+                android:background="@android:color/darker_gray"
+                android:layout_below="@+id/profile_profile_room" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="17dp"
+                android:layout_marginEnd="8dp"
+                android:text="Phone"
+                android:textSize="12sp"
+                android:layout_below="@+id/view6" />
+            <TextView
+                android:id="@+id/profile_profile_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginEnd="8dp"
+                android:text="--"
+                android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                android:layout_below="@+id/textView7" />
+            <View
+                android:id="@+id/view7"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="24dp"
+                android:background="@android:color/darker_gray"
+                android:layout_below="@+id/profile_profile_phone" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="17dp"
+                android:layout_marginEnd="8dp"
+                android:text="Status"
+                android:textSize="12sp"
+                android:layout_below="@+id/view7" />
+            <TextView
+                android:id="@+id/profile_profile_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginEnd="8dp"
+                android:text="--"
+                android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                android:layout_below="@+id/textView8" />
+            <View
+                android:id="@+id/view8"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="24dp"
+                android:background="@android:color/darker_gray"
+                android:layout_below="@+id/profile_profile_status" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="17dp"
+                android:layout_marginEnd="8dp"
+                android:text="Gender"
+                android:textSize="12sp"
+                android:layout_below="@+id/view8" />
+            <TextView
+                android:id="@+id/profile_profile_gender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginEnd="8dp"
+                android:text="--"
+                android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                android:layout_below="@+id/textView9" />
+            <View
+                android:id="@+id/view9"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="24dp"
+                android:background="@android:color/darker_gray"
+                android:layout_below="@+id/profile_profile_gender" />
+
+            <TextView
+                android:id="@+id/tentangTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view9"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="8dp"
+                android:text="Tentang"
+                android:textColor="@color/hitam"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/tentangAppBtn"
+                android:layout_below="@+id/tentangTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="?android:attr/borderlessButtonStyle"
+                android:text="Tentang Aplikasi"
+                android:paddingStart="24dp"
+                android:gravity="left|center_vertical"
+                android:textAllCaps="false"/>
+
+            <View
+                android:id="@+id/view10"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:background="@android:color/darker_gray"
+                android:layout_below="@+id/tentangAppBtn" />
+
+            <Button
+                android:id="@+id/syaratDanKetentuanBtn"
+                android:layout_below="@+id/view10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="?android:attr/borderlessButtonStyle"
+                android:text="Syarat dan Keterntuan"
+                android:paddingStart="24dp"
+                android:gravity="left|center_vertical"
+                android:textAllCaps="false"/>
+
+            <View
+                android:id="@+id/view11"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:background="@android:color/darker_gray"
+                android:layout_below="@+id/syaratDanKetentuanBtn" />
+
+            <Button
+                android:id="@+id/bantuanBtn"
+                android:layout_below="@+id/view11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="?android:attr/borderlessButtonStyle"
+                android:text="Pusat Bantuan"
+                android:paddingStart="24dp"
+                android:gravity="left|center_vertical"
+                android:textAllCaps="false"/>
+
+            <View
+                android:id="@+id/view12"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:background="@android:color/darker_gray"
+                android:layout_below="@+id/bantuanBtn" />
+
+            <Button
+                android:id="@+id/saranBtn"
+                android:layout_below="@+id/view12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="?android:attr/borderlessButtonStyle"
+                android:text="Saran"
+                android:paddingStart="24dp"
+                android:gravity="left|center_vertical"
+                android:textAllCaps="false"/>
+
+            <View
+                android:id="@+id/view13"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:background="@android:color/darker_gray"
+                android:layout_below="@+id/saranBtn" />
+
+            <Button
+                android:id="@+id/hubungiBtn"
+                android:layout_below="@+id/view13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="?android:attr/borderlessButtonStyle"
+                android:text="Hubungi"
+                android:paddingStart="24dp"
+                android:gravity="left|center_vertical"
+                android:textAllCaps="false"/>
+
+            <View
+                android:id="@+id/view14"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:background="@android:color/darker_gray"
+                android:layout_below="@+id/hubungiBtn" />
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>

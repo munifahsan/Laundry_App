@@ -14,11 +14,11 @@
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bnb_tab"
         android:layout_width="match_parent"
-        android:layout_height="55dp"
+        android:layout_height="50dp"
         android:layout_alignParentBottom="true"
         android:background="@color/biruLaut"
         app:menu="@menu/navigation"
-        app:itemIconSize="23dp"
+        app:itemIconSize="20dp"
         app:itemIconTint="@drawable/state_bnve"
         app:itemTextColor="@drawable/state_bnve"/>
 

@@ -25,6 +25,14 @@
     <string name="kilat_btn">KILAT</string>
     <string name="desc_text">Catatan...</string>
     <string name="confirm_order_btn">CONFIRM</string>
+    <string name="detail_jumlah_pakaian">Detail Jumlah Pakaian</string>
+    <string name="alamat_pengiriman">Alamat Pengiriman</string>
+    <string name="waktu_selesai">Waktu Selesai</string>
+    <string name="waktu_pemesanan">Waktu Pemesanan</string>
+    <string name="tipe_laundry">Tipe Laundry</string>
+    <string name="detail_pesanan">Detail Pesanan</string>
+    <string name="tiga_titik">...</string>
+    <string name="tulis_catatan">Tulis Catatan</string>
 
     <integer name="btn_plus_view">1</integer>
     <integer name="btn_plus_pos">2</integer>

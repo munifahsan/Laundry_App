@@ -1,0 +1,92 @@
+package com.tiunida.laundry0.order.biasa.ui;
+
+public interface BiasaViewMvp {
+    void showMessage(String message);
+    void navigateToMainScreen();
+    void setRoomDormitory(String room, String dormitory);
+    void getDataProfile();
+    void getDoneTime();
+    void getNowTime();
+    void getUniqNumByTime();
+    void confirmOnClick();
+    void showDialog();
+
+    void bandanaMinOnclick();
+    void bandanaPlsOnClick();
+    void topiMinOnclick();
+    void topiPlsOnclick();
+    void maskerMinOnClick();
+    void maskerPlsOnClick();
+    void kuplukMinOnClick();
+    void kuplukPlsOnClick();
+    void krudungMinOnClick();
+    void krudungPlsOnClick();
+    void peciMinOnClick();
+    void peciPlsOnclick();
+
+    void kaosMinOnClick();
+    void kaosPlsOnClick();
+    void kaosDalamOnClick();
+    void kaosDalamPlsOnClick();
+    void kemejaMinOnClick();
+    void kemejaPlsOnClick();
+    void bajuMuslimOnClick();
+    void bajuMuslimPlsOnClick();
+    void jaketMinOnClick();
+    void jaketPlsOnClick();
+    void sweterMinOnClick();
+    void sweterPlsOnClick();
+    void gamisMinOnClick();
+    void gamisPlsOnClick();
+    void handukMinOnClick();
+    void handukPlsOnClick();
+
+    void sarungTanganMinOnClick();
+    void sarungTanganPlsOnClick();
+    void sapuTanganMinOnClick();
+    void sapuTanganPlsOnClick();
+
+    void cenaMinOnClick();
+    void cenalaPlsOnClick();
+    void celanaDalamMinOnClick();
+    void celanaDalamPlsOnClick();
+    void celanaPendekMinOnClick();
+    void celanaPendekOnClick();
+    void sarungMInOnClick();
+    void sarungPlsOnClick();
+    void celanaOlahragaMinOnClick();
+    void celanaOlahragaPlsOnClick();
+    void rokMinOnClick();
+    void rokPlsOnClick();
+    void celanaLevisMinOnClick();
+    void celanaLevisPlsOnClick();
+    void kaosKakiMinOnClick();
+    void kaosKakiPlsOnClick();
+
+    void jasAlmamaterMinOnClick();
+    void jasAlmamaterPlsOnClick();
+    void jasMinOnClick();
+    void jasPlsOnClick();
+    void selimutKecilMinOnClick();
+    void selimutKecilPlsOnClick();
+    void selimutBesarMinOnClick();
+    void selimutBesarPlsOnClick();
+    void bagCoverMinOnClick();
+    void bagCoverPlsOnClick();
+    void gordengKecilMinOnClick();
+    void gordengKecilPlsOnClick();
+    void gordengBesarMinOnClick();
+    void gordengBesarPlsOnClick();
+    void sepatuMinOnClick();
+    void sepatuPlsOnClick();
+    void bantalMinOnClick();
+    void bantalPlsOnClick();
+    void tasKecilMinOnClick();
+    void tasKecilPlsOnClick();
+    void tasBesarMinOnClick();
+    void tasBesarPlsOnClick();
+    void spreiKecilMinOnClick();
+    void spreiKecilPlsOnClick();
+    void spreiBesarMinOnClick();
+    void spreiBesarPlsOnClick();
+}

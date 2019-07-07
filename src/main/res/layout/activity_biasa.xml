@@ -1,0 +1,586 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".order.biasa.ui.BiasaActivity"
+    android:fitsSystemWindows="true"
+    android:background="@color/biruMuda"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+            <!-- Your scrolling content -->
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="0dp">
+
+                <!--<ProgressBar-->
+                <!--android:id="@+id/order_progress"-->
+                <!--style="?android:attr/progressBarStyleSmall"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:indeterminate="true"-->
+                <!--android:visibility="visible"-->
+                <!--app:layout_constraintEnd_toEndOf="parent"-->
+                <!--app:layout_constraintStart_toStartOf="parent"-->
+                <!--app:layout_constraintTop_toTopOf="parent" />-->
+
+                <!--<RelativeLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content">-->
+
+                <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:orientation="vertical">-->
+
+                <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="6dp"-->
+                <!--android:layout_marginStart="8dp"-->
+                <!--android:layout_marginBottom="6dp"-->
+                <!--android:text="Type"-->
+                <!--android:textColor="@color/biruLaut"/>-->
+                <!--<LinearLayout-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_centerHorizontal="true"-->
+                <!--android:orientation="horizontal">-->
+
+                <!--<Button-->
+                <!--android:id="@+id/button_normal"-->
+                <!--android:layout_width="100dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginStart="8dp"-->
+                <!--android:layout_marginEnd="8dp"-->
+                <!--android:background="@drawable/btn_order_background"-->
+                <!--android:text="@string/normal_btn"-->
+                <!--android:textColor="@color/putih" />-->
+
+                <!--<Button-->
+                <!--android:id="@+id/button_express"-->
+                <!--android:layout_width="100dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginStart="8dp"-->
+                <!--android:layout_marginEnd="8dp"-->
+                <!--android:background="@drawable/btn_order_border"-->
+                <!--android:text="@string/express_btn"-->
+                <!--android:textColor="@color/biruLaut" />-->
+
+                <!--<Button-->
+                <!--android:id="@+id/button_kilat"-->
+                <!--android:layout_width="100dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginStart="8dp"-->
+                <!--android:layout_marginEnd="8dp"-->
+                <!--android:background="@drawable/btn_order_border"-->
+                <!--android:text="@string/kilat_btn"-->
+                <!--android:textColor="@color/biruLaut" />-->
+
+                <!--</LinearLayout>-->
+
+                <!--<RelativeLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent">-->
+                <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:orientation="vertical">-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/forecase_txt"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:layout_marginTop="6dp"-->
+                <!--android:layout_marginBottom="2dp"-->
+                <!--android:text="ROUGHLY YOUR ORDER WILL BE FINISHED ON"-->
+                <!--android:textColor="@color/biruLaut"-->
+                <!--android:textSize="12sp" />-->
+                <!--<TextView-->
+                <!--android:id="@+id/forecase_done_time"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="6dp"-->
+                <!--android:layout_marginBottom="6dp"-->
+                <!--android:text="@string/tiga_titik"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:textColor="@color/biruLaut"/>-->
+                <!--</LinearLayout>-->
+                <!--</RelativeLayout>-->
+                <!--</LinearLayout>-->
+                <!--</RelativeLayout>-->
+
+                <!--<androidx.constraintlayout.widget.ConstraintLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="220dp"-->
+                    <!--android:background="@color/putih"-->
+                    <!--android:layout_marginTop="8dp">-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/detailPesanan"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginStart="24dp"-->
+                        <!--android:layout_marginTop="16dp"-->
+                        <!--android:layout_marginEnd="8dp"-->
+                        <!--android:text="@string/detail_pesanan"-->
+                        <!--android:textColor="@android:color/black"-->
+                        <!--android:textSize="13sp"-->
+                        <!--android:textStyle="bold"-->
+                        <!--app:layout_constraintEnd_toEndOf="parent"-->
+                        <!--app:layout_constraintHorizontal_bias="0.0"-->
+                        <!--app:layout_constraintStart_toStartOf="parent"-->
+                        <!--app:layout_constraintTop_toTopOf="parent" />-->
+
+                    <!--&lt;!&ndash;<View&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:id="@+id/view4"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_height="1dp"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_marginTop="8dp"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_marginBottom="20dp"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:background="@android:color/darker_gray"&ndash;&gt;-->
+                    <!--&lt;!&ndash;app:layout_constraintBottom_toBottomOf="parent"&ndash;&gt;-->
+                    <!--&lt;!&ndash;app:layout_constraintEnd_toEndOf="parent"&ndash;&gt;-->
+                    <!--&lt;!&ndash;app:layout_constraintHorizontal_bias="0.0"&ndash;&gt;-->
+                    <!--&lt;!&ndash;app:layout_constraintStart_toStartOf="parent"&ndash;&gt;-->
+                    <!--&lt;!&ndash;app:layout_constraintTop_toTopOf="parent"&ndash;&gt;-->
+                    <!--&lt;!&ndash;app:layout_constraintVertical_bias="0.916" />&ndash;&gt;-->
+
+                    <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:id="@+id/textView2"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_marginStart="24dp"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_marginEnd="8dp"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_marginBottom="9dp"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:text="Detail Jumlah Pakaian"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:textColor="@android:color/black"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:textSize="13sp"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:textStyle="bold"&ndash;&gt;-->
+                    <!--&lt;!&ndash;app:layout_constraintBottom_toBottomOf="parent"&ndash;&gt;-->
+                    <!--&lt;!&ndash;app:layout_constraintEnd_toEndOf="parent"&ndash;&gt;-->
+                    <!--&lt;!&ndash;app:layout_constraintHorizontal_bias="0.0"&ndash;&gt;-->
+                    <!--&lt;!&ndash;app:layout_constraintStart_toStartOf="parent"&ndash;&gt;-->
+                    <!--&lt;!&ndash;app:layout_constraintTop_toBottomOf="@+id/view4"&ndash;&gt;-->
+                    <!--&lt;!&ndash;app:layout_constraintVertical_bias="1.0" />&ndash;&gt;-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/tipeLaundry"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginStart="24dp"-->
+                        <!--android:layout_marginTop="8dp"-->
+                        <!--android:text="@string/tipe_laundry"-->
+                        <!--android:textSize="12sp"-->
+                        <!--app:layout_constraintStart_toStartOf="parent"-->
+                        <!--app:layout_constraintTop_toBottomOf="@+id/detailPesanan" />-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/textView11"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginStart="24dp"-->
+                        <!--android:layout_marginTop="10dp"-->
+                        <!--android:text="@string/waktu_pemesanan"-->
+                        <!--android:textSize="12sp"-->
+                        <!--app:layout_constraintStart_toStartOf="parent"-->
+                        <!--app:layout_constraintTop_toBottomOf="@+id/tipeLaundry" />-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/textView12"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginStart="24dp"-->
+                        <!--android:layout_marginTop="10dp"-->
+                        <!--android:text="@string/waktu_selesai"-->
+                        <!--android:textSize="12sp"-->
+                        <!--app:layout_constraintStart_toStartOf="parent"-->
+                        <!--app:layout_constraintTop_toBottomOf="@+id/textView11" />-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/textView13"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginStart="24dp"-->
+                        <!--android:layout_marginTop="10dp"-->
+                        <!--android:text="@string/alamat_pengiriman"-->
+                        <!--android:textSize="12sp"-->
+                        <!--app:layout_constraintStart_toStartOf="parent"-->
+                        <!--app:layout_constraintTop_toBottomOf="@+id/textView12" />-->
+
+                <!--</androidx.constraintlayout.widget.ConstraintLayout>-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:background="@color/putih"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/detailPesanan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="8dp"
+                        android:text="@string/detail_pesanan"
+                        android:textColor="@android:color/black"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:id="@+id/detailPesanan1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/detailPesanan">
+
+                        <TextView
+                            android:id="@+id/tipeLaundry"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/tipe_laundry"
+                            android:textSize="12sp" />
+
+                        <!--<TextView-->
+                            <!--android:id="@+id/textView11"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_below="@+id/tipeLaundry"-->
+                            <!--android:layout_marginStart="24dp"-->
+                            <!--android:layout_marginTop="10dp"-->
+                            <!--android:text="@string/waktu_pemesanan"-->
+                            <!--android:textSize="12sp" />-->
+
+                        <TextView
+                            android:id="@+id/textView12"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tipeLaundry"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/waktu_selesai"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/textView13"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/textView12"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/alamat_pengiriman"
+                            android:textSize="12sp" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tipeLaundryValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/detailPesanan"
+                        android:layout_toEndOf="@id/detailPesanan1"
+                        android:layout_marginStart="70dp"
+                        android:layout_marginTop="8dp"
+                        android:text="Laundry Normal"
+                        android:textStyle="bold"
+                        android:textSize="12sp" />
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/waktuPemesananValue"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_below="@id/tipeLaundryValue"-->
+                        <!--android:layout_toEndOf="@id/detailPesanan1"-->
+                        <!--android:layout_marginStart="70dp"-->
+                        <!--android:layout_marginTop="10dp"-->
+                        <!--android:text="-"-->
+                        <!--android:textStyle="bold"-->
+                        <!--android:textSize="12sp" />-->
+
+                    <TextView
+                        android:id="@+id/waktuSelesaiValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tipeLaundryValue"
+                        android:layout_toEndOf="@id/detailPesanan1"
+                        android:layout_marginStart="70dp"
+                        android:layout_marginTop="10dp"
+                        android:text="-"
+                        android:textStyle="bold"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/alamatPengirimanValueDormitory"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/waktuSelesaiValue"
+                        android:layout_toEndOf="@id/detailPesanan1"
+                        android:layout_marginStart="70dp"
+                        android:layout_marginTop="10dp"
+                        android:text="-"
+                        android:textStyle="bold"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/alamatPengirimanValueRoom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/alamatPengirimanValueDormitory"
+                        android:layout_toEndOf="@id/detailPesanan1"
+                        android:layout_marginStart="70dp"
+                        android:text="-"
+                        android:textStyle="bold"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/putih"
+                    android:orientation="vertical"
+                    android:paddingBottom="9dp">
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="7dp"
+                        android:text="@string/detail_jumlah_pakaian"
+                        android:textColor="@android:color/black"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:id="@+id/headList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:layout_below="@id/textView2">
+
+                        <com.riyagayasen.easyaccordion.AccordionView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:paddingStart="22dp"
+                            android:paddingEnd="22dp"
+                            android:visibility="visible"
+                            app:heading="Atribut kepala "
+                            app:isAnimated="false"
+                            app:isExpanded="true"
+                            app:isPartitioned="true">
+
+                            <include
+                                android:id="@+id/head"
+                                layout="@layout/item_head_list" />
+
+                        </com.riyagayasen.easyaccordion.AccordionView>
+                    </RelativeLayout>
+                    <!--<View-->
+                    <!--android:id="@+id/view4"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="1dp"-->
+                    <!--android:layout_marginTop="8dp"-->
+                    <!--android:background="@android:color/darker_gray"/>-->
+                    <RelativeLayout
+                        android:id="@+id/bodyList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:layout_below="@id/headList">
+
+                        <com.riyagayasen.easyaccordion.AccordionView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:paddingStart="22dp"
+                            android:paddingEnd="22dp"
+                            android:visibility="visible"
+                            app:heading="Atribut badan"
+                            app:isAnimated="false"
+                            app:isExpanded="false"
+                            app:isPartitioned="true">
+
+                            <include layout="@layout/item_body_list" />
+
+                        </com.riyagayasen.easyaccordion.AccordionView>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/handList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:layout_below="@id/bodyList">
+
+                        <com.riyagayasen.easyaccordion.AccordionView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:paddingStart="22dp"
+                            android:paddingEnd="22dp"
+                            android:visibility="visible"
+                            app:heading="Atribut tangan "
+                            app:isAnimated="false"
+                            app:isExpanded="false"
+                            app:isPartitioned="true">
+
+                            <include layout="@layout/item_hand_list" />
+                        </com.riyagayasen.easyaccordion.AccordionView>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/feetList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:layout_below="@id/handList">
+
+                        <com.riyagayasen.easyaccordion.AccordionView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:paddingStart="22dp"
+                            android:paddingEnd="22dp"
+                            android:visibility="visible"
+                            app:heading="Atribut kaki "
+                            app:isAnimated="false"
+                            app:isExpanded="false"
+                            app:isPartitioned="true">
+
+                            <include layout="@layout/item_feet_list" />
+                        </com.riyagayasen.easyaccordion.AccordionView>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/otherList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:layout_below="@id/feetList"
+                        android:visibility="gone">
+
+                        <com.riyagayasen.easyaccordion.AccordionView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:paddingStart="22dp"
+                            android:paddingEnd="22dp"
+                            android:visibility="visible"
+                            app:heading="Others"
+                            app:isAnimated="false"
+                            app:isExpanded="false"
+                            app:isPartitioned="true">
+
+                            <include layout="@layout/item_other_list" />
+                        </com.riyagayasen.easyaccordion.AccordionView>
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/putih"
+                    android:orientation="vertical"
+                    android:paddingTop="0dp"
+                    android:paddingBottom="10dp">
+
+                    <TextView
+                        android:id="@+id/textView9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="9dp"
+                        android:text="@string/tulis_catatan"
+                        android:textColor="@android:color/black"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <!--<LinearLayout-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:orientation="horizontal"-->
+                    <!--android:layout_centerHorizontal="true">-->
+
+                    <EditText
+                        android:id="@+id/desc_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginEnd="24dp"
+                        android:background="@drawable/text_border"
+                        android:gravity="top|start"
+                        android:hint="@string/desc_text"
+                        android:inputType="textCapSentences|textMultiLine"
+                        android:maxLength="2000"
+                        android:maxLines="5"
+                        android:minLines="3"
+                        android:padding="6dp"
+                        android:scrollHorizontally="false"
+                        android:textSize="14sp"
+                        tools:ignore="Autofill" />
+
+                    <!--</LinearLayout>-->
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                        <Button
+                            android:id="@+id/confirm_btn"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/putih"
+                            android:padding="8dp"
+                            android:text="@string/confirm_order_btn"
+                            android:textColor="@color/biruLaut" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/putih"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:title="@string/order_title"
+                app:titleTextColor="@color/biruLaut" />
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <!--</ScrollView>-->
+
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</FrameLayout>
