@@ -39,14 +39,14 @@ public class ProfileFragRepository implements ProfileFragRepositoryMvp{
 
                     if (task.getResult().exists()){
 //                        Toast.makeText(SetupActivity.this,"datanya ada " , Toast.LENGTH_LONG).show();
-                        String name = task.getResult().getString("0 name");
-                        String nim = task.getResult().getString("1 nim");
-                        String room = task.getResult().getString("3 room");
+                        String name = task.getResult().getString("a_name");
+                        String nim = task.getResult().getString("b_nim");
+                        String room = task.getResult().getString("d_room");
                         String image = task.getResult().getString("image");
-                        String dormitory = task.getResult().getString("2 dormitory");
-                        String phone = task.getResult().getString("4 phone number");
-                        String gender = task.getResult().getString("5 gender");
-                        String status = task.getResult().getString("6 status");
+                        String dormitory = task.getResult().getString("c_dormitory");
+                        String phone = task.getResult().getString("e_phone number");
+                        String gender = task.getResult().getString("f_gender");
+                        String status = task.getResult().getString("g_status");
 
                         Log.d("data dapat","masuk" + name);
                         postEvent(ProfileFragEvents.onGetDataSuccess,null, name,nim,dormitory,room,phone,status,gender);

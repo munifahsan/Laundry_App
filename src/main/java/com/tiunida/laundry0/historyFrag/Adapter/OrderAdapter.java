@@ -4,6 +4,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -32,6 +33,7 @@ public class OrderAdapter extends FirestoreRecyclerAdapter<Model, OrderAdapter.O
         orderHolder.mDoneTimeTxt.setText(model.getA_waktu_selesai());
 
 
+
         if (model.getA_price2() != null) {
             Log.d("tidak ", "null");
             int priceInt = Integer.valueOf(model.getA_price2());
@@ -42,7 +44,6 @@ public class OrderAdapter extends FirestoreRecyclerAdapter<Model, OrderAdapter.O
         }
 
         //orderHolder.mPrice.setText(model.getA_price2());
-
 
         String string1 = "1";
         if (model.getH_accepted2().equals(string1)) {

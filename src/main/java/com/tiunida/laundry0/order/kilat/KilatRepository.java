@@ -42,8 +42,8 @@ public class KilatRepository implements KilatRepositoryMvp {
                     Log.d("repo onComplete suc:", "masuk");
 
                     if (task.getResult().exists()) {
-                        String room = task.getResult().getString("3 room");
-                        String dormitory = task.getResult().getString("2 dormitory");
+                        String room = task.getResult().getString("d_room");
+                        String dormitory = task.getResult().getString("c_dormitory");
                         String test = task.getResult().getString("done");
 
                         postEvent(KilatEventsProfile.onGetDataSuccess, null, dormitory, room);
@@ -174,7 +174,7 @@ public class KilatRepository implements KilatRepositoryMvp {
     }
 
     @Override
-    public void postEvent(int type, String errorMessage, String dataRoom, String dataDormitory) {
+    public void postEvent(int type, String errorMessage, String dataDormitory, String dataRoom) {
         KilatEventsProfile kilatEventsProfile = new KilatEventsProfile();
         kilatEventsProfile.setEventType(type);
         Log.d("masuk post", "masuk post event succes not null");

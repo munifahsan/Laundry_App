@@ -59,9 +59,10 @@ public class ProfileFragPresenter implements ProfileFragPresenterMvp {
     public void onGetDataSuccess(String dataName, String dataNim, String dataDormitory, String dataRoom, String dataPhone, String dataStatus, String dataGender){
         if (mProfileFragmentViewMvp != null){
             //mProfileFragmentViewMvp.showProgress();
-            mProfileFragmentViewMvp.setData(dataName,dataNim,dataDormitory,dataRoom,dataPhone,dataStatus,dataGender);
             mProfileFragmentViewMvp.hideProgress();
             mProfileFragmentViewMvp.setButtons(true);
+            mProfileFragmentViewMvp.setData(dataName,dataNim,dataDormitory,dataRoom,dataPhone,dataStatus,dataGender);
         }
+
     }
 }

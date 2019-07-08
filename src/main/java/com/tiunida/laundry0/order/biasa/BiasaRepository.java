@@ -43,8 +43,8 @@ public class BiasaRepository implements BiasaRepositoryMvp {
                     Log.d("repo onComplete suc:", "masuk");
 
                     if (task.getResult().exists()) {
-                        String room = task.getResult().getString("3 room");
-                        String dormitory = task.getResult().getString("2 dormitory");
+                        String room = task.getResult().getString("d_room");
+                        String dormitory = task.getResult().getString("c_dormitory");
                         String test = task.getResult().getString("done");
 
                         postEvent(BiasaEventsProfile.onGetDataSuccess, null, dormitory, room);
@@ -175,7 +175,7 @@ public class BiasaRepository implements BiasaRepositoryMvp {
     }
 
     @Override
-    public void postEvent(int type, String errorMessage, String dataRoom, String dataDormitory) {
+    public void postEvent(int type, String errorMessage, String dataDormitory, String dataRoom) {
         BiasaEventsProfile biasaEventsProfile = new BiasaEventsProfile();
         biasaEventsProfile.setEventType(type);
         Log.d("masuk post", "masuk post event succes not null");

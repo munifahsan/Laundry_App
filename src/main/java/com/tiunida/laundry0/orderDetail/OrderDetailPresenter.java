@@ -154,7 +154,7 @@ public class OrderDetailPresenter implements OrderDetailPresenterMvp {
         if (dataDone.equals(string1)) {
             mOrderDetailViewMvp.setDoneIndicatorCheck();
         } else {
-            mOrderDetailViewMvp.setProsesIndicatorUnCheck();
+            mOrderDetailViewMvp.setDoneIndicatorUnCheck();
         }
 
         if (dataPaid.equals(string1)) {

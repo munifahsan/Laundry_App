@@ -43,8 +43,8 @@ public class ExpressRepository implements ExpressRepositoryMvp {
                     Log.d("repo onComplete suc:", "masuk");
 
                     if (task.getResult().exists()) {
-                        String room = task.getResult().getString("3 room");
-                        String dormitory = task.getResult().getString("2 dormitory");
+                        String room = task.getResult().getString("d_room");
+                        String dormitory = task.getResult().getString("c_dormitory");
                         String test = task.getResult().getString("done");
 
                         postEvent(ExpressEventsProfile.onGetDataSuccess, null, dormitory, room);
@@ -175,7 +175,7 @@ public class ExpressRepository implements ExpressRepositoryMvp {
     }
 
     @Override
-    public void postEvent(int type, String errorMessage, String dataRoom, String dataDormitory) {
+    public void postEvent(int type, String errorMessage, String dataDormitory, String dataRoom) {
         ExpressEventsProfile expressEventsProfile = new ExpressEventsProfile();
         expressEventsProfile.setEventType(type);
         Log.d("masuk post", "masuk post event succes not null");

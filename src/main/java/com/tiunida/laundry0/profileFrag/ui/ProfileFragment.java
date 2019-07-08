@@ -72,19 +72,11 @@ public class ProfileFragment extends Fragment implements ProfileFragmentViewMvp{
 
         getDataProfile();
 
-//        mLogOut = (Button)myFragment.findViewById(R.id.log_out);
-//        mLogOut.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                mAuth.signOut();
-//                sendToLogin();
-//            }
-//        });
         return myFragment;
     }
 
     public void hideProgress(){
-        mProfileProgres.setVisibility(View.INVISIBLE);
+        mProfileProgres.setVisibility(View.GONE);
     }
 
     public void showProgress(){
