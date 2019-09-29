@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SplashScreenActivity">
+    android:id="@+id/splash_screen"
+    tools:context=".ActivitySplashScreen.SplashScreenActivity">
 
     <ImageView
         android:layout_width="80dp"

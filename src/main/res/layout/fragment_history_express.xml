@@ -1,14 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".history.HistoryExpressFragment">
+    android:orientation="vertical"
+    tools:context=".Xhistory.HistoryExpressFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/historyToolbar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark" />
 
-</FrameLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/historyTablayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        app:tabSelectedTextColor="@android:color/white"
+        app:tabTextColor="@android:color/black">
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabBiasa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="biasa" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabExpress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="express" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabKilat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kilat" />
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/historyViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

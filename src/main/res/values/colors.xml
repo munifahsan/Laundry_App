@@ -12,11 +12,15 @@
 
     <color name="black_effective">#b7b7b7</color>
 
-    <color name="abuabu">#747272</color>
+    <color name="abuabu">#A7A6A6</color>
+
+    <color name="abuabu1">#F7F6F6</color>
+
+    <color name="abuabu2">#EEEEEE</color>
 
     <color name="backgroundApp">#d6eeff</color>
     <color name="basicColor">#2699FB</color>
-    <color name="hitam">#000000</color>
+    <color name="hitam">#2B2B2B</color>
 
     <color name="merah">#FF0000</color>
 

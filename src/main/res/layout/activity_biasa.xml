@@ -8,7 +8,7 @@
     android:fitsSystemWindows="true"
     android:orientation="vertical"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".order.biasa.ui.BiasaActivity">
+    tools:context=".ActivityOrder.biasa.ui.BiasaActivity">
 
     <ProgressBar
         android:id="@+id/kilat_progress"
@@ -431,9 +431,11 @@
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
             <androidx.appcompat.widget.Toolbar
+                android:id="@+id/biasaToolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 android:background="@color/putih"
+                app:titleTextAppearance="@style/Toolbar.TitleText"
                 app:layout_scrollFlags="scroll|enterAlways"
                 app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
                 app:title="@string/order_title"

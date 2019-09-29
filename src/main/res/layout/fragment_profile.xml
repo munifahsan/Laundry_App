@@ -5,10 +5,9 @@
     android:id="@+id/frameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginBottom="50dp"
     android:background="@color/putih"
     android:orientation="vertical"
-    tools:context=".profileFrag.ui.ProfileFragment">
+    tools:context=".FragmentProfile.ui.ProfileFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <ProgressBar
@@ -41,7 +40,7 @@
                 android:enabled="false"
                 android:text="Log out"
                 android:layout_below="@+id/view14"
-                android:textColor="@color/biruLaut"
+                android:textColor="@color/merah"
                 android:layout_centerHorizontal="true"
                 />
 
@@ -117,6 +116,7 @@
                 android:layout_below="@+id/profile_profile_name" />
 
             <TextView
+                android:visibility="gone"
                 android:id="@+id/textView4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -127,6 +127,7 @@
                 android:textSize="12sp"
                 android:layout_below="@+id/view3" />
             <TextView
+                android:visibility="gone"
                 android:id="@+id/profile_profile_nim"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -137,6 +138,7 @@
                 android:textColor="@color/common_google_signin_btn_text_dark_focused"
                 android:layout_below="@+id/textView4" />
             <View
+                android:visibility="gone"
                 android:id="@+id/view4"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
@@ -302,7 +304,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/view9"
                 android:layout_marginStart="24dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="40dp"
                 android:layout_marginEnd="8dp"
                 android:text="Tentang"
                 android:textColor="@color/hitam"

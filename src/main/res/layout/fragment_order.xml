@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/putih"
-    tools:context=".orderFrag.OrderFragment">
+    android:orientation="vertical"
+    tools:context=".FragmentHome.OrderFragment">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -24,156 +25,212 @@
     <!--app:titleTextColor="@color/biruLaut" />-->
     <!--</com.google.android.material.appbar.AppBarLayout>-->
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/toolBar"
+    <!--<androidx.cardview.widget.CardView-->
+    <!--android:id="@+id/toolBar"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="50dp"-->
+    <!--android:background="@color/putih"-->
+    <!--app:cardElevation="5dp">-->
+
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/title"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent">-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:layout_marginStart="24dp"-->
+    <!--android:text="Laundry U3"-->
+    <!--android:textColor="@color/biruLaut"-->
+    <!--android:textSize="18dp"-->
+    <!--android:textStyle="bold" />-->
+    <!--</RelativeLayout>-->
+
+    <!--&lt;!&ndash;<View&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_height="1dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_below="@+id/title"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:background="@android:color/darker_gray" />&ndash;&gt;-->
+    <!--</androidx.cardview.widget.CardView>-->
+
+    <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="@color/putih"
-        app:cardElevation="5dp">
-
-        <RelativeLayout
-            android:id="@+id/title"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginStart="24dp"
-                android:text="Laundry U3"
-                android:textColor="@color/biruLaut"
-                android:textSize="18dp"
-                android:textStyle="bold" />
-        </RelativeLayout>
-
-        <!--<View-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="1dp"-->
-            <!--android:layout_below="@+id/title"-->
-            <!--android:background="@android:color/darker_gray" />-->
-    </androidx.cardview.widget.CardView>
-
-    <TextView
-        android:id="@+id/jenis"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/toolBar"
-        android:layout_marginStart="14dp"
-        android:layout_marginTop="8dp"
-        android:text="Jenis Laundry"
-        android:textColor="@color/hitam"
-        android:textStyle="bold" />
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/orderToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/putih"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:title="ORDER"
+            app:titleTextAppearance="@style/Toolbar.TitleText"
+            app:titleTextColor="@color/hitam" />
+    </com.google.android.material.appbar.AppBarLayout>
 
     <RelativeLayout
         android:id="@+id/orderRel"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/jenis"
-        android:layout_marginTop="8dp">
+        android:layout_height="150dp"
+        android:layout_marginTop="2dp"
+        android:background="@color/putih">
+
+        <TextView
+            android:id="@+id/jenis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="8dp"
+            android:text="Janis laundry"
+            android:textColor="@color/hitam"
+            android:textStyle="bold" />
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/order_biasa_btn"
-            android:layout_width="95dp"
-            android:layout_height="90dp"
-            android:layout_margin="8dp"
-            android:layout_toStartOf="@+id/order_express_btn"
-            app:cardBackgroundColor="@color/biruLaut"
-            app:cardCornerRadius="15dp">
+            android:layout_below="@+id/jenis"
+            android:layout_marginEnd="14dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="14dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="5dp">
 
-            <RelativeLayout
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:orientation="horizontal"
+                android:layout_height="match_parent">
 
-                <ImageView
-                    android:id="@+id/iconBiasa"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="12dp"
-                    android:src="@drawable/ic_biasa" />
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/order_biasa_btn"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="90dp"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginEnd="0dp"
+                    app:cardBackgroundColor="@color/putih"
+                    app:cardCornerRadius="0dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/iconBiasa"
-                    android:layout_centerHorizontal="true"
-                    android:text="Biasa"
-                    android:textColor="@color/putih"
-                    android:textStyle="bold" />
-            </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
 
+                        <ImageView
+                            android:visibility="visible"
+                            android:id="@+id/iconBiasa"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginTop="12dp"
+                            android:src="@drawable/biasa" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/iconBiasa"
+                            android:layout_centerHorizontal="true"
+                            android:text="Biasa"
+                            android:visibility="gone"
+                            android:textColor="@color/biruLaut"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/biruMuda" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/order_express_btn"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="90dp"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginEnd="0dp"
+                    app:cardBackgroundColor="@color/putih"
+                    app:cardCornerRadius="0dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/iconExpress"
+                            android:layout_width="68dp"
+                            android:layout_height="60dp"
+                            android:layout_centerInParent="true"
+                            android:layout_marginTop="12dp"
+                            android:src="@drawable/express" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/iconExpress"
+                            android:layout_centerHorizontal="true"
+                            android:text="Express"
+                            android:visibility="gone"
+                            android:textColor="@color/putih"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/biruMuda" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/order_kilat_btn"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="90dp"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginEnd="0dp"
+                    android:layout_toEndOf="@+id/order_express_btn"
+                    app:cardBackgroundColor="@color/putih"
+                    app:cardCornerRadius="0dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/iconKilat"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_centerVertical="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="12dp"
+                            android:src="@drawable/kilat" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:visibility="gone"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/iconKilat"
+                            android:layout_centerHorizontal="true"
+                            android:text="Kilat"
+                            android:textColor="@color/putih"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
         </androidx.cardview.widget.CardView>
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/order_express_btn"
-            android:layout_width="95dp"
-            android:layout_height="90dp"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_margin="8dp"
-            app:cardBackgroundColor="@color/biruLaut"
-            app:cardCornerRadius="15dp">
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:id="@+id/iconExpress"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="12dp"
-                    android:src="@drawable/ic_express" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/iconExpress"
-                    android:layout_centerHorizontal="true"
-                    android:text="Express"
-                    android:textColor="@color/putih"
-                    android:textStyle="bold" />
-            </RelativeLayout>
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/order_kilat_btn"
-            android:layout_width="95dp"
-            android:layout_height="90dp"
-            android:layout_alignParentTop="true"
-            android:layout_margin="8dp"
-            android:layout_toEndOf="@+id/order_express_btn"
-            app:cardBackgroundColor="@color/biruLaut"
-            app:cardCornerRadius="15dp">
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:id="@+id/iconKilat"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="12dp"
-                    android:src="@drawable/ic_kilat" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/iconKilat"
-                    android:layout_centerHorizontal="true"
-                    android:text="Kilat"
-                    android:textColor="@color/putih"
-                    android:textStyle="bold" />
-            </RelativeLayout>
-        </androidx.cardview.widget.CardView>
     </RelativeLayout>
+
 
     <View
         android:id="@+id/view12"
@@ -212,4 +269,4 @@
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
 
-</RelativeLayout>
+</LinearLayout>

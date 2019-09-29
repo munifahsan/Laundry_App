@@ -1,0 +1,53 @@
+package com.tiunida.laundry0.ActivitySyaratKetentuan.ui;
+
+public interface SyaratKetentuanViewMvp {
+    void setRelAllVisible();
+    void showProgress();
+    void hideProgress();
+    void setTextAkad1(String text);
+    void setTextAkad2(String text);
+    void setTextAkad3(String text);
+    void setTextAkad4(String text);
+    void setTextAkad5(String text);
+    void setTextAkad6(String text);
+    void setTextAkad7(String text);
+    void setTextAkad8(String text);
+    void setTextAkad9(String text);
+    void setTextAkad10(String text);
+    void setTextAkad11(String text);
+    void setTextAkad12(String text);
+    void setTextAkad13(String text);
+    void setTextAkad14(String text);
+    void setTextAkad15(String text);
+
+    void setAkad1Gone();
+    void setAkad2Gone();
+    void setAkad3Gone();
+    void setAkad4Gone();
+    void setAkad5Gone();
+    void setAkad6Gone();
+    void setAkad7Gone();
+    void setAkad8Gone();
+    void setAkad9Gone();
+    void setAkad10Gone();
+    void setAkad11Gone();
+    void setAkad12Gone();
+    void setAkad13Gone();
+    void setAkad14Gone();
+    void setAkad15Gone();
+    void setAkad1Visible();
+    void setAkad2Visible();
+    void setAkad3Visible();
+    void setAkad4Visible();
+    void setAkad5Visible();
+    void setAkad6Visible();
+    void setAkad7Visible();
+    void setAkad8Visible();
+    void setAkad9Visible();
+    void setAkad10Visible();
+    void setAkad11Visible();
+    void setAkad12Visible();
+    void setAkad13Visible();
+    void setAkad14Visible();
+    void setAkad15Visible();
+}

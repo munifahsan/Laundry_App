@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/biruMuda"
     android:orientation="vertical"
-    tools:context=".orderDetail.ui.OrderDetailActivity">
+    tools:context=".ActivityOrderDetail.ui.OrderDetailActivity">
 
     <ProgressBar
         android:id="@+id/order_detail_progress"
@@ -15,7 +15,6 @@
         android:layout_height="8dp"
         android:indeterminate="true"
         android:visibility="visible" />
-
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
@@ -27,13 +26,15 @@
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
             <androidx.appcompat.widget.Toolbar
+                android:id="@+id/detailOrderToolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 android:background="@color/putih"
+                app:titleTextAppearance="@style/Toolbar.TitleText"
                 app:layout_scrollFlags="scroll|enterAlways"
                 app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
                 app:title="@string/order_title"
-                app:titleTextColor="@color/biruLaut" />
+                app:titleTextColor="@color/hitam" />
         </com.google.android.material.appbar.AppBarLayout>
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
@@ -541,6 +542,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/clothes"
                     android:background="@color/putih"
+                    android:enabled="false"
                     android:text="ASK ADMIN"
                     android:textColor="@color/biruLaut" />
 

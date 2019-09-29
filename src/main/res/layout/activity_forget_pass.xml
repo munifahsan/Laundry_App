@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/putih"
-    tools:context=".forgetPass.ForgetPassActivity">
+    tools:context=".ActivityForgetPass.ui.ForgetPassActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -26,9 +26,9 @@
                 android:id="@+id/forget_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
+                android:layout_marginStart="24dp"
                 android:layout_marginTop="208dp"
-                android:layout_marginEnd="8dp"
+                android:layout_marginEnd="24dp"
                 android:background="@drawable/text_field_border"
                 android:ems="10"
                 android:hint="Your Email"
@@ -36,6 +36,7 @@
                 android:paddingLeft="19dp"
                 android:paddingTop="16dp"
                 android:paddingRight="19dp"
+                android:textSize="14sp"
                 android:paddingBottom="14dp"
                 android:textColor="@color/biruLaut"
                 android:textColorHint="@color/biruBorder"
@@ -47,13 +48,14 @@
             <Button
                 android:id="@+id/send_email"
                 android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_marginStart="8dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="24dp"
                 android:layout_marginTop="240dp"
-                android:layout_marginEnd="8dp"
+                android:layout_marginEnd="24dp"
                 android:layout_marginBottom="8dp"
                 android:background="@drawable/btn_background"
                 android:text="send email"
+                android:textSize="14sp"
                 android:textColor="@color/putih"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"

@@ -1,11 +1,11 @@
 <resources>
-    <string name="app_name">Laundry.0</string>
+    <string name="app_name">Laundry U3</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="order_title">ORDER</string>
-    <string name="history_title">HISTORY</string>
-    <string name="profile_title">PROFILE</string>
+    <string name="order_title">Order</string>
+    <string name="history_title">History</string>
+    <string name="profile_title">Profile</string>
 
     <string name="email_edt_txt">E-mail&#8230;</string>
     <string name="pass_edt_text">Password&#8230;</string>
@@ -19,7 +19,7 @@
     <string name="empty_password">Please provide a non empty password.</string>
 
     <!--order fragment button text-->
-
+    <string name="tentang">Tentang</string>
     <string name="normal_btn">NORMAL</string>
     <string name="express_btn">EXPRESS</string>
     <string name="kilat_btn">KILAT</string>

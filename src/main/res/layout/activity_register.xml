@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/putih"
-    tools:context=".register.ui.RegisterActivity">
+    tools:context=".ActivityRegister.ui.RegisterActivity">
+
     <ProgressBar
         android:id="@+id/register_progress"
         style="?android:attr/progressBarStyleHorizontal"
@@ -48,7 +49,7 @@
                 android:paddingBottom="14dp"
                 android:textColor="@color/biruLaut"
                 android:textColorHint="@color/biruBorder"
-                android:textSize="18sp"
+                android:textSize="14dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
@@ -71,6 +72,7 @@
                 android:paddingBottom="14dp"
                 android:textColor="@color/biruLaut"
                 android:textColorHint="@color/biruBorder"
+                android:textSize="14dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/email_reg_edt" />
@@ -92,6 +94,7 @@
                 android:paddingBottom="14dp"
                 android:textColor="@color/biruLaut"
                 android:textColorHint="@color/biruBorder"
+                android:textSize="14dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/pass_reg_edt" />
